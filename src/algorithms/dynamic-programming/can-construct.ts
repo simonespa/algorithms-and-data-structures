@@ -20,7 +20,7 @@ function bruteForceCanConstruct(targetWord: string, substrings: Array<string>): 
   return false;
 }
 
-function memoisedCanConstruct(targetWord: string, substrings: Array<string>, buffer: object = {}): boolean {
+function memoisedCanConstruct(targetWord: string, substrings: Array<string>, buffer: { [key: string]: boolean } = {}): boolean {
   if (targetWord in buffer) return buffer[targetWord];
   if (targetWord.length === 0) return true;
 
