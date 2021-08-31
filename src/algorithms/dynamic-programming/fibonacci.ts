@@ -17,7 +17,7 @@ function bruteForceFibonacci(n: number): number {
  * @param n the nth element in the Fibonacci sequence.
  * @param buffer buffer object used for memoisation.
  */
-function memoisedFibonacci(n: number, buffer: object = {}): number {
+function memoisedFibonacci(n: number, buffer: { [key: number]: number } = {}): number {
   if (n in buffer) return buffer[n];
   if (n <= 2) return 1;
 

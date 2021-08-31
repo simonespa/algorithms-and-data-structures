@@ -1,6 +1,6 @@
 import bestSum from '../../../src/algorithms/dynamic-programming/best-sum';
 
-describe('[src/algorithms/dynamic-programming/best-sum', () => {
+describe('[src/algorithms/dynamic-programming/best-sum]', () => {
   describe('when target sum can be calculated', () => {
     const numbers: Array<number> = [1, 2, 3];
     const targetSum: number = 5;
