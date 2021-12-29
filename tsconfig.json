@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "es5",                                     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "lib": ["esnext"],                                   /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-
-    /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
-
-    /* Emit */
-    "outDir": "build",                                   /* Specify an output folder for all emitted files. */
-
-    /* Interop Constraints */
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-
-    /* Type Checking */
-    "strict": true,                                      /* Enable all strict type-checking options. */
-    "noImplicitAny": true,                               /* Enable error reporting for expressions and declarations with an implied `any` type.. */
-
-    /* Completeness */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "baseUrl": "./",
+    "paths": {
+      "src/*": [
+        "src/*"
+      ]
+    },
+    "target": "es5",
+    "lib": [
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
   },
   "watchOptions": {
     // Use native file system events for files and directories
@@ -30,6 +32,8 @@
     // when they're updated a lot.
     "fallbackPolling": "dynamicPriority"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules"
+  ]
 }
