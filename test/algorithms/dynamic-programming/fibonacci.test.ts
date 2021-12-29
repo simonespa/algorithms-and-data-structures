@@ -1,4 +1,4 @@
-import fibonacci from '../../../src/algorithms/dynamic-programming/fibonacci';
+import fibonacci from 'src/algorithms/dynamic-programming/fibonacci';
 
 const parameters = [
   { n: -1, expected: 1 },

@@ -1,5 +1,5 @@
-import BinaryNode from '../../src/BinaryNode';
-import { preOrder, inOrder, postOrder } from '../../src/algorithms/dfs';
+import BinaryNode from 'src/BinaryNode';
+import { preOrder, inOrder, postOrder } from 'src/algorithms/dfs';
 
 describe('[src/algorithms/dfs]', () => {
   let nodes: Array<BinaryNode<number>>;

@@ -1,5 +1,5 @@
-import mergeSort from '../../../src/algorithms/sorting/merge-sort';
-import SortingOrder from '../../../src/util/SortingOrder';
+import mergeSort from 'src/algorithms/sorting/merge-sort';
+import SortingOrder from 'src/util/SortingOrder';
 
 describe('src/algorithms/sorting/merge-sort', () => {
   test('mergeSort ascending', () => {

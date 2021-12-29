@@ -1,3 +1,4 @@
 .coverage
 .jest
 node_modules
+*.tsbuildinfo

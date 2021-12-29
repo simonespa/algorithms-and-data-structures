@@ -1,4 +1,4 @@
-import gridTraveller from '../../../src/algorithms/dynamic-programming/grid-traveller';
+import gridTraveller from 'src/algorithms/dynamic-programming/grid-traveller';
 
 const parameters = [
   {rows: 0, columns: 0, expected: 0},

@@ -1,4 +1,4 @@
-import howSum from '../../../src/algorithms/dynamic-programming/how-sum';
+import howSum from 'src/algorithms/dynamic-programming/how-sum';
 
 const parameters = [
   {targetSum: 10, numbers: [5, 7, 3, 2, 1], expected: [5, 5]},

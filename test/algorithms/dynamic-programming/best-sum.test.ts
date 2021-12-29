@@ -1,4 +1,4 @@
-import bestSum from '../../../src/algorithms/dynamic-programming/best-sum';
+import bestSum from 'src/algorithms/dynamic-programming/best-sum';
 
 describe('[src/algorithms/dynamic-programming/best-sum]', () => {
   describe('when target sum can be calculated', () => {

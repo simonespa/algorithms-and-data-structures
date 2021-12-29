@@ -1,4 +1,4 @@
-import canSum from '../../../src/algorithms/dynamic-programming/can-sum';
+import canSum from 'src/algorithms/dynamic-programming/can-sum';
 
 describe('[src/algorithms/dynamic-programming/can-sum]', () => {
   describe('when target sum can be calculated', () => {

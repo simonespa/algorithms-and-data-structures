@@ -1,4 +1,4 @@
-import canConstruct from '../../../src/algorithms/dynamic-programming/can-construct';
+import canConstruct from 'src/algorithms/dynamic-programming/can-construct';
 
 describe('[src/algorithms/dynamic-programming/can-construct]', () => {
   describe('when the string can be constructed', () => {
