@@ -32,7 +32,7 @@
     // when they're updated a lot.
     "fallbackPolling": "dynamicPriority"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "test/**/*.ts"],
   "exclude": [
     "node_modules"
   ]
