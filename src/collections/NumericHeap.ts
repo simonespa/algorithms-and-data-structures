@@ -112,6 +112,3 @@ export default class NumericHeap {
     this.heap[indexTwo] = temp;
   }
 }
-
-const h = new NumericHeap([2, 4, 7, 1, 5, 3], HeapType.MIN);
-console.log(h.toArray());
