@@ -56,7 +56,7 @@ class Person extends Comparable<number> {
   }
 }
 
-class Heap<T extends Comparable<X>, X> {
+class HeapArray<T extends Comparable<X>, X> {
   private heap: Array<T>;
   private heapType: HeapType;
 
@@ -92,5 +92,5 @@ class Heap<T extends Comparable<X>, X> {
 const a = new Person('Simone', 38);
 const b = new Person('Lalla', 40);
 
-const h: Heap<Person, number> = new Heap([a, b], HeapType.MAX);
+const h: HeapArray<Person, number> = new HeapArray([a, b], HeapType.MAX);
 console.log((h.get() as Person).getName());
