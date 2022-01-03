@@ -51,12 +51,13 @@
 
   // A list of paths to directories that Jest should use to search for files in.
   roots: [
-    '<rootDir>/test'
+    '<rootDir>/test',
+    '<rootDir>/src'
   ],
 
   // The glob patterns Jest uses to detect test files.
   testMatch: [
-    '**/?(*.)+(test).+(ts|tsx)'
+    '**/?(*.)+(test).+(ts)'
   ],
 
   verbose: true
