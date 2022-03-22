@@ -1,6 +1,9 @@
 # Algorithms & Data structures
+
 This repo is an open source collection and playground of algorithms, data structures and related documentation to brush up your knowledge of computer science fundamentals, or learn it from scratch.
+
 ## How to use it
+
 Install all dependencies
 
 ```
