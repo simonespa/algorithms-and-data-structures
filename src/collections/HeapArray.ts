@@ -1,5 +1,5 @@
-import Heap from './Heap';
-import Comparable, { Comparison } from '../util/Comparable';
+import Heap from 'src/collections/Heap';
+import Comparable, { Comparison } from 'src/util/Comparable';
 
 enum HeapType {
   MaxHeap = 0,

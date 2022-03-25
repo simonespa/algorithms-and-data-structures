@@ -1,4 +1,5 @@
-.nyc_output
-build
-coverage
+.coverage
+.jest
+dist
 node_modules
+*.tsbuildinfo

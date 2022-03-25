@@ -1,24 +1,35 @@
 /**
- * This is the base interface for all collections.
+ * The root interface in the <i>collection hierarchy</i>. A collection
+ * represents a group of objects, known as its <i>items</i>. Some
+ * collections allow duplicate elements and others do not. Some are ordered
+ * and others unordered.
  */
 export default interface Collection<T> {
   /**
-   * Tests if the collection is empty.
+     * Returns the number of items in this collection.
+     *
+     * @return the number of items in this collection
+     */
+  size(): number;
+
+  /**
+   * Returns {@code true} if this collection contains no items.
    *
-   * @returns {boolean} true if the collection contains no items; false otherwise.
+   * @return {@code true} if this collection contains no items
    */
   isEmpty(): boolean;
 
   /**
-   * Returns the number of items stored in the collection.
+   * Returns {@code true} if this collection contains the specified item.
    *
-   * @returns {number} the number of items.
+   * @param item the item to search in the collection
+   * @returns {@code true} if this collection contains the specified item
    */
-  size(): number;
+  contains(item: T): boolean;
 
   /**
-   * Removes all items from the collection, setting the size to zero.
-   * The collection will be empty after this call returns (i.e. isEmpty returns true).
+   * Removes all of the elements from this collection.
+   * The collection will be empty after this method returns.
    */
   clear(): void;
 }

@@ -1,5 +1,5 @@
-import Collection from './Collection';
-import Comparable from '../util/Comparable';
+import Collection from 'src/collections/Collection';
+import Comparable from 'src/util/Comparable';
 
 /**
  * A heap is a binary tree that satisfies two properties:

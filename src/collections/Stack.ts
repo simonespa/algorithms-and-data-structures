@@ -1,9 +1,11 @@
-/**
- * Stack is a linear data structure which follows
- * the LIFO (Last In First Out) approach.
- */
-export default interface Stack<T> {
+import Collection from 'src/collections/Collection';
 
+/**
+ * The {@code Stack} interface represents a last-in-first-out
+ * (LIFO) stack of items. The usual {@code push} and {@code pop} operations are provided,
+ * as well as a method to {@code peek} at the top item on the stack.
+ */
+export default interface Stack<T> extends Collection<T> {
   /**
    * Pushes an item at the top of the stack.
    * @param {T} item the item to be pushed onto this stack.

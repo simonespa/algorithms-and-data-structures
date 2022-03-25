@@ -1,38 +1,41 @@
-import Collection from './Collection';
-import Stack from './Stack';
+import Stack from 'src/collections/Stack';
 
 /**
  * This class implements the Stack interface using the JavaScript dynamic array.
  */
-export default class StackArray<T> implements Stack<T>, Collection<T> {
+export default class StackArray<T> implements Stack<T> {
 
-  private array: Array<T>;
+  private stack: Array<T>;
 
-  constructor(input: Array<T> = []) {
-    this.array = [...input]; // shallow copy
+  constructor(collection: Array<T> = []) {
+    this.stack = [...collection]; // clone
   }
 
   push(item: T): void {
-    this.array.push(item);
+    this.stack.push(item);
   }
 
-  pop(): T | undefined {
-    return this.array.pop();
+  pop(): T {
+    return this.stack.pop();
   }
 
-  peek(): T | undefined {
-    return this.array.slice(-1)[0];
-  }
-
-  isEmpty(): boolean {
-    return this.array.length === 0;
+  peek(): T {
+    return this.stack[this.stack.length - 1];
   }
 
   size(): number {
-    return this.array.length;
+    return this.stack.length;
+  }
+
+  isEmpty(): boolean {
+    return this.stack.length === 0;
+  }
+
+  contains(item: T): boolean {
+    return this.stack.includes(item);
   }
 
   clear(): void {
-    this.array.splice(0);
+    this.stack.splice(0);
   }
 }
