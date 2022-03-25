@@ -1,5 +1,11 @@
-export default interface Stack<T> {
+import Collection from './Collection';
 
+/**
+ * The {@code Stack} interface represents a last-in-first-out
+ * (LIFO) stack of items. The usual {@code push} and {@code pop} operations are provided,
+ * as well as a method to {@code peek} at the top item on the stack.
+ */
+export default interface Stack<T> extends Collection<T> {
   /**
    * Pushes an item at the top of the stack.
    * @param {T} item the item to be pushed onto this stack.
@@ -18,27 +24,4 @@ export default interface Stack<T> {
    * @returns {T | undefined} the item or undefined.
    */
   peek(): T | undefined;
-
-  /**
-   * Tests if this stack is empty.
-   * @returns {boolean} true if and only if this stack contains no items; false otherwise.
-   */
-  isEmpty(): boolean;
-
-  /**
-   * Returns the number of items stored in the stack.
-   * @returns {number} the number of items.
-   */
-  size(): number;
-
-  /**
-   * Removes all of the items from the stack, setting the size to zero. The Stack will be empty after this call returns.
-   */
-  clear(): void;
-
-  /**
-   * Returns a string representation of the stack.
-   * @returns {string} the string representation.
-   */
-  toString(): string;
 }
