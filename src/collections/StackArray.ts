@@ -1,5 +1,8 @@
 import Stack from 'src/collections/Stack';
 
+/**
+ * This class implements the Stack interface using the JavaScript dynamic array.
+ */
 export default class StackArray<T> implements Stack<T> {
 
   private stack: Array<T>;
