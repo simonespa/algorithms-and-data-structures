@@ -1,4 +1,4 @@
-import BinaryNode from 'src/collections/BinaryNode';
+import BinaryNode from 'src/data-structures/nodes/BinaryNode';
 
 describe('when a new object is created', () => {
   it('should set the value with the one passed in the constructor and set the "visited" flag to true when the value is read', () => {

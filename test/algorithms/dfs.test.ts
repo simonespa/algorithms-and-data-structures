@@ -1,4 +1,4 @@
-import BinaryNode from 'src/collections/BinaryNode';
+import BinaryNode from 'src/data-structures/nodes/BinaryNode';
 import { preOrder, inOrder, postOrder } from 'src/algorithms/dfs';
 
 let nodes: Array<BinaryNode<number>>;
