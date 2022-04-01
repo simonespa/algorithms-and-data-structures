@@ -5,10 +5,12 @@
       "src/*": ["src/*"]
     },
     "outDir": "dist",
+    "noEmit": true,
     "target": "ESNext",
     "lib": ["ESNext"],
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
+    "esModuleInterop": true,
     "incremental": true
   },
   "watchOptions": {
@@ -20,6 +22,6 @@
     // when they're updated a lot.
     "fallbackPolling": "dynamicPriority"
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "include": ["src/**/*", "test/**/*"],
   "exclude": ["node_modules"]
 }

@@ -1,4 +1,4 @@
-import SortingOrder from 'src/util/SortingOrder';
+import SortingOrder from '../../util/SortingOrder';
 
 interface Split {
   left: Array<number>,

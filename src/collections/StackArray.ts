@@ -1,4 +1,4 @@
-import Stack from 'src/collections/Stack';
+import Stack from './Stack';
 
 export default class StackArray<T> implements Stack<T> {
 

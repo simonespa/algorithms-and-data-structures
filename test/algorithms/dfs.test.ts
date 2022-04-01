@@ -1,4 +1,4 @@
-import BinaryNode from 'src/BinaryNode';
+import BinaryNode from 'src/collections/BinaryNode';
 import { preOrder, inOrder, postOrder } from 'src/algorithms/dfs';
 
 let nodes: Array<BinaryNode<number>>;
@@ -11,21 +11,21 @@ beforeAll(() => {
     nodes[i] = new BinaryNode(i + 1);
   }
 
-  nodes[root].setLeft(nodes[1]);
-  nodes[root].setRight(nodes[2]);
+  nodes[root].setLeftChild(nodes[1]);
+  nodes[root].setRightChild(nodes[2]);
 
-  nodes[1].setLeft(nodes[3]);
-  nodes[1].setRight(nodes[0]);
+  nodes[1].setLeftChild(nodes[3]);
+  nodes[1].setRightChild(nodes[0]);
 
-  nodes[3].setLeft(nodes[6]);
-  nodes[3].setRight(nodes[7]);
+  nodes[3].setLeftChild(nodes[6]);
+  nodes[3].setRightChild(nodes[7]);
 
-  nodes[0].setLeft(nodes[10]);
+  nodes[0].setLeftChild(nodes[10]);
 
-  nodes[2].setLeft(nodes[4]);
-  nodes[2].setRight(nodes[8]);
+  nodes[2].setLeftChild(nodes[4]);
+  nodes[2].setRightChild(nodes[8]);
 
-  nodes[4].setRight(nodes[9]);
+  nodes[4].setRightChild(nodes[9]);
 });
 
 test('preOrder', () => {

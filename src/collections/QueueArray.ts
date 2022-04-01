@@ -1,4 +1,4 @@
-import Queue from 'src/collections/Queue';
+import Queue from './Queue';
 
 export default class QueueArray<T> implements Queue<T> {
 

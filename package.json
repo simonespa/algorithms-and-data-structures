@@ -2,10 +2,8 @@
   "name": "algorithms-and-data-structures",
   "version": "1.0.0",
   "description": "An open source collection and playground of algorithms, data structures and related documentation to brush up your knowledge of computer science fundamentals, or learn it from scratch.",
-  "type": "module",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc",
     "exec": "ts-node",
     "test": "jest",
     "test:watch": "jest --watch"
