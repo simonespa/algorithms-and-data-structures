@@ -16,7 +16,7 @@ To play around with the data structures and algorithms and create your own stuff
 npm run dev
 ```
 
-You can run a TypeScript module directly with `ts-node`
+You can run a TS script
 
 ```
 npm start <path/to/the/file.ts>
