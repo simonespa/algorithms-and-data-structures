@@ -26,5 +26,5 @@ test.each(parameters)(
 
 test('test gridTraveller(30, 30) with memoisation and deduplication', () => {
   const output = gridTraveller({ rows: 30, columns: 30, deduped: true });
-  expect(output).toEqual(30067266499541040);
+  expect(output).toBe(30067266499541040);
 });

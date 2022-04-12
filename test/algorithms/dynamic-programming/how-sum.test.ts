@@ -22,5 +22,5 @@ test('test howSum with memoisation', () => {
   const targetSum = 999;
   const numbers: Array<number> = [2, 4];
   const output = howSum({ targetSum, numbers, memoised: true });
-  expect(output).toEqual(null);
+  expect(output).toBeNull();
 });

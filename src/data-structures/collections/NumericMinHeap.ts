@@ -66,8 +66,8 @@ export default class NumericMinHeap {
   }
 
   private getMin(indexOne: number, indexTwo: number): number {
-    let one = this.heap[indexOne];
-    let two = this.heap[indexTwo];
+    const one = this.heap[indexOne];
+    const two = this.heap[indexTwo];
 
     if (one === undefined) return indexTwo;
     if (two === undefined) return indexOne;

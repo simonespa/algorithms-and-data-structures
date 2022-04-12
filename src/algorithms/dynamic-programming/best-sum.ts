@@ -13,7 +13,7 @@ function bruteForceBestSum(targetSum: number, numbers: Array<number>): Array<num
 
   let min: null | Array<number> = null;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     const remainder = targetSum - number;
     const bestSumResult = bruteForceBestSum(remainder, numbers);
     if (bestSumResult !== null) {
@@ -48,7 +48,7 @@ function memoisedBestSum(
 
   let min: null | Array<number> = null;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     const remainder = targetSum - number;
     const bestSumResult = memoisedBestSum(remainder, numbers, buffer);
     if (bestSumResult !== null) {

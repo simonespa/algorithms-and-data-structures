@@ -10,7 +10,7 @@
 function bruteForceCanConstruct(targetWord: string, substrings: Array<string>): boolean {
   if (targetWord.length === 0) return true;
 
-  for (let substring of substrings) {
+  for (const substring of substrings) {
     if (targetWord.startsWith(substring)) {
       const newTargetWord = targetWord.slice(substring.length);
       if (bruteForceCanConstruct(newTargetWord, substrings)) return true;
@@ -28,7 +28,7 @@ function memoisedCanConstruct(
   if (targetWord in buffer) return buffer[targetWord];
   if (targetWord.length === 0) return true;
 
-  for (let substring of substrings) {
+  for (const substring of substrings) {
     if (targetWord.startsWith(substring)) {
       const newTargetWord = targetWord.slice(substring.length);
       if (memoisedCanConstruct(newTargetWord, substrings, buffer)) {

@@ -6,12 +6,12 @@ describe('when the string can be constructed', () => {
 
   test('brute force implementation', () => {
     const output = canConstruct({ word, substrings });
-    expect(output).toEqual(true);
+    expect(output).toBe(true);
   });
 
   test('memoised implementation', () => {
     const output = canConstruct({ word, substrings, memoised: true });
-    expect(output).toEqual(true);
+    expect(output).toBe(true);
   });
 });
 
@@ -21,11 +21,11 @@ describe('when the string can not be constructed', () => {
 
   test('brute force implementation', () => {
     const output = canConstruct({ word, substrings });
-    expect(output).toEqual(false);
+    expect(output).toBe(false);
   });
 
   test('memoised implementation', () => {
     const output = canConstruct({ word, substrings, memoised: true });
-    expect(output).toEqual(false);
+    expect(output).toBe(false);
   });
 });

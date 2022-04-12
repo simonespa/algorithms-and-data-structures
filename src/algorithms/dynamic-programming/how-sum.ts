@@ -11,7 +11,7 @@ function bruteForceHowSum(targetSum: number, numbers: Array<number>): Array<numb
   if (targetSum === 0) return [];
   if (targetSum < 0) return null;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     const remainder = targetSum - number;
     const result = bruteForceHowSum(remainder, numbers);
     if (result != null) {
@@ -41,7 +41,7 @@ function memoisedHowSum(
   if (targetSum === 0) return [];
   if (targetSum < 0) return null;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     const remainder = targetSum - number;
     const result = memoisedHowSum(remainder, numbers, buffer);
     if (result != null) {

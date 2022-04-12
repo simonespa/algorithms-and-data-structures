@@ -21,13 +21,13 @@ enum Operand {
 function whoGoesFirst(x: number, y: number, order: SortingOrder): Operand {
   if (order === SortingOrder.Ascending && x <= y) {
     return Operand.Left;
-  } else if (order === SortingOrder.Ascending && x > y) {
+  } if (order === SortingOrder.Ascending && x > y) {
     return Operand.Right;
-  } else if (order === SortingOrder.Descending && x <= y) {
+  } if (order === SortingOrder.Descending && x <= y) {
     return Operand.Right;
-  } else {
+  } 
     return Operand.Left;
-  }
+  
 }
 
 function merge(left: Array<number>, right: Array<number>, order: SortingOrder): Array<number> {
