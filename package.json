@@ -8,8 +8,8 @@
     "start": "ts-node",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "lint --dir .",
-    "lint:fix": "lint --fix --dir .",
+    "lint": "eslint --ext .ts,.js .",
+    "lint:fix": "eslint --fix --dir .",
     "format": "prettier --write '**/*.{ts,js,json,yml,yaml,md}'",
     "ts-check": "tsc --pretty"
   },
