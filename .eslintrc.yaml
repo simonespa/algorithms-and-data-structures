@@ -6,6 +6,7 @@ root: true # to stop Eslint searching recursively for other configs in parent di
 
 extends:
   - eslint:recommended
+  - plugin:@typescript-eslint/recommended
   - plugin:jest/recommended
   - plugin:jest/style
   - prettier
@@ -15,7 +16,13 @@ extends:
 env:
   node: true
 
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project:
+  - "./tsconfig.json"
+
 plugins:
+  - "@typescript-eslint"
   - jest # https://github.com/jest-community/eslint-plugin-jest
 
 rules: # https://eslint.org/docs/rules
