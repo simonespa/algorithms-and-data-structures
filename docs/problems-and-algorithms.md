@@ -10,6 +10,7 @@
 Both Prim’s and Kruskal’s algorithm finds the Minimum Spanning Tree and follow the Greedy approach of problem-solving, but there are few major differences between them.
 
 **Prim’s Algorithm**
+
 - It starts to build the Minimum Spanning Tree from any vertex in the graph.
 - It traverses one node more than one time to get the minimum distance.
 - Prim’s algorithm has a time complexity of O(V^2), V being the number of vertices and can be improved up to O(E + log V) using Fibonacci heaps.
@@ -17,9 +18,10 @@ Both Prim’s and Kruskal’s algorithm finds the Minimum Spanning Tree and foll
 - Prim’s algorithm runs faster in dense graphs.
 
 **Kruskal’s Algorithm**
+
 - It starts to build the Minimum Spanning Tree from the vertex carrying minimum weight in the graph.
 - It traverses one node only once.
-- Kruskal’s algorithm’s time complexity is O(E * log V), V being the number of vertices.
+- Kruskal’s algorithm’s time complexity is O(E \* log V), V being the number of vertices.
 - Kruskal’s algorithm can generate forest(disconnected components) at any instant as well as it can work on disconnected components
 - Kruskal’s algorithm runs faster in sparse graphs.
 
@@ -31,6 +33,7 @@ Prim’s algorithm can handle negative edge weights, but Dijkstra’s algorithm 
 In practice, Dijkstra’s algorithm is used when we want to save time and fuel traveling from one point to another. Prim’s algorithm, on the other hand, is used when we want to minimize material costs in constructing roads that connect multiple points to each other.
 
 ### Dijkstra algorithm
+
 This algorithm finds the shortest path from a source node to all nodes in a graph, producing the so called Shortest Path Tree (SPT).
 It can be applied to both directed and undirected graphs.
 It doesn't work for graphs with negative weight cycles.
@@ -38,6 +41,7 @@ It doesn't work for graphs with negative weight cycles.
 Time complexity: O(V^2)
 
 ### Prim's algorithm
+
 Also known as Jarník's algorithm, it is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
 
 ### Reverse-delete algorithm

@@ -20,7 +20,11 @@ function bruteForceCanConstruct(targetWord: string, substrings: Array<string>): 
   return false;
 }
 
-function memoisedCanConstruct(targetWord: string, substrings: Array<string>, buffer: { [key: string]: boolean } = {}): boolean {
+function memoisedCanConstruct(
+  targetWord: string,
+  substrings: Array<string>,
+  buffer: { [key: string]: boolean } = {}
+): boolean {
   if (targetWord in buffer) return buffer[targetWord];
   if (targetWord.length === 0) return true;
 
@@ -34,7 +38,7 @@ function memoisedCanConstruct(targetWord: string, substrings: Array<string>, buf
     }
   }
 
-  buffer[targetWord] = false
+  buffer[targetWord] = false;
   return false;
 }
 
@@ -44,7 +48,7 @@ function memoisedCanConstruct(targetWord: string, substrings: Array<string>, buf
  * @param memoised true to optimise the recursive function by caching the intermediate responses.
  */
 export interface CanConstructParameters {
-  word: string,
+  word: string;
   substrings: Array<string>;
   memoised?: boolean;
 }

@@ -1,5 +1,32 @@
 // Add any extra import statements you may need here
-const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const letters = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z',
+];
 const index = {
   a: '0',
   b: '1',
@@ -26,7 +53,7 @@ const index = {
   w: '22',
   x: '23',
   y: '24',
-  z: '25'
+  z: '25',
 };
 
 // Add any helper functions you may need here

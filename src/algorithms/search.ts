@@ -16,7 +16,7 @@ export function binarySearch(target: number, sequence: number[]): boolean {
     if (target < sequence[middle]) {
       end = middle - 1;
     } else {
-      start = middle
+      start = middle;
     }
   }
 

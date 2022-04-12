@@ -1,7 +1,6 @@
 import QueueArray from './QueueArray.js';
 
 export default class PriorityQueueArray extends QueueArray<number> {
-
   constructor() {
     super([]);
   }

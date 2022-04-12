@@ -13,14 +13,16 @@ const parameters = [
   { rows: 3, columns: 3, expected: 6 },
   { rows: 3, columns: 4, expected: 10 },
   { rows: 4, columns: 3, expected: 10 },
-  { rows: 4, columns: 4, expected: 20 }
+  { rows: 4, columns: 4, expected: 20 },
 ];
 
-
-test.each(parameters)('gridTraveller($rows, $columns) must be $expected', ({ rows, columns, expected }) => {
-  const output = gridTraveller({ rows, columns });
-  expect(output).toEqual(expected);
-});
+test.each(parameters)(
+  'gridTraveller($rows, $columns) must be $expected',
+  ({ rows, columns, expected }) => {
+    const output = gridTraveller({ rows, columns });
+    expect(output).toEqual(expected);
+  }
+);
 
 test('test gridTraveller(30, 30) with memoisation and deduplication', () => {
   const output = gridTraveller({ rows: 30, columns: 30, deduped: true });

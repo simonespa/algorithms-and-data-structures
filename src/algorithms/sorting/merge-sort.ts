@@ -1,21 +1,21 @@
 import SortingOrder from '../../util/SortingOrder';
 
 interface Split {
-  left: Array<number>,
-  right: Array<number>
+  left: Array<number>;
+  right: Array<number>;
 }
 
 function split(input: Array<number>): Split {
   const pivot = Math.floor(input.length / 2);
   return {
     left: input.slice(0, pivot),
-    right: input.slice(pivot)
-  }
+    right: input.slice(pivot),
+  };
 }
 
 enum Operand {
   Left = 0,
-  Right = 1
+  Right = 1,
 }
 
 function whoGoesFirst(x: number, y: number, order: SortingOrder): Operand {

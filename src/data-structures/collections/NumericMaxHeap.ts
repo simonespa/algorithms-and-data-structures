@@ -1,5 +1,4 @@
 export default class NumericMaxHeap {
-
   private heap: Array<number>;
 
   constructor(input: Array<number> = []) {

@@ -32,7 +32,11 @@ function bruteForceHowSum(targetSum: number, numbers: Array<number>): Array<numb
  * @param numbers the array of numbers to combine.
  * @param buffer the buffer used for memoisation.
  */
-function memoisedHowSum(targetSum: number, numbers: Array<number>, buffer: { [key: number]: Array<number> | null } = {}): Array<number> | null {
+function memoisedHowSum(
+  targetSum: number,
+  numbers: Array<number>,
+  buffer: { [key: number]: Array<number> | null } = {}
+): Array<number> | null {
   if (targetSum in buffer) return buffer[targetSum];
   if (targetSum === 0) return [];
   if (targetSum < 0) return null;
@@ -67,7 +71,7 @@ export interface HowSumParameters {
  *
  * Every element can be used an arbitrary number of times.
  */
-export default function howSum(parameters: HowSumParameters): Array<number> | null{
+export default function howSum(parameters: HowSumParameters): Array<number> | null {
   const { targetSum, numbers, memoised } = parameters;
 
   if (memoised) {

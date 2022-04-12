@@ -1,7 +1,9 @@
-export enum HeapType { MIN, MAX };
+export enum HeapType {
+  MIN,
+  MAX,
+}
 
 export default class NumericHeap {
-
   private heap: Array<number>;
   private heapType: HeapType;
 
@@ -26,7 +28,10 @@ export default class NumericHeap {
     // If the current node is a leaf, exit
     if (this.isLeaf(currentIndex)) return;
     // Get the winner (min or max) child
-    const winnerChildIndex = this.getWinnerIndex(this.getLeftChildIndex(currentIndex), this.getRightChildIndex(currentIndex));
+    const winnerChildIndex = this.getWinnerIndex(
+      this.getLeftChildIndex(currentIndex),
+      this.getRightChildIndex(currentIndex)
+    );
     // If the winner child index wins against the current index
     if (this.isLeftTheWinnerIndex(winnerChildIndex, currentIndex)) {
       // swap positions

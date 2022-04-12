@@ -29,7 +29,7 @@ export function iterativePreOrderTraversal<T>(node: BinaryTree<T>): T[] {
 
   const stack = [node];
 
-  while(stack.length > 0) {
+  while (stack.length > 0) {
     const currentNode = stack.pop();
     result.push(currentNode.value);
     // the right child must be pushed first so that the left child is processed first (LIFO order)
@@ -55,7 +55,7 @@ export function iterativePreOrderTraversalRightChildOnly<T>(node: BinaryTree<T>)
   const stack = [node];
   let currentNode = node;
 
-  while(stack.length > 0) {
+  while (stack.length > 0) {
     // if the current node exists, print it and push its right child
     // to the stack before moving to its left child
     if (currentNode !== null) {
@@ -96,7 +96,7 @@ export function iterativeInOrderTraversal<T>(node: BinaryTree<T>): T[] {
   const stack = [];
   let currentNode = node;
 
-  while(stack.length > 0 || currentNode !== null) {
+  while (stack.length > 0 || currentNode !== null) {
     if (currentNode !== null) {
       stack.push(currentNode);
       currentNode = currentNode.leftChild;
@@ -118,9 +118,9 @@ export function iterativeInOrderTraversalWithDoubleWhile<T>(node: BinaryTree<T>)
   const stack = [];
   let currentNode = node;
 
-  while(stack.length > 0 || currentNode !== null) {
+  while (stack.length > 0 || currentNode !== null) {
     // Reach the left most Node of the subtree
-    while(currentNode !== null) {
+    while (currentNode !== null) {
       stack.push(currentNode);
       currentNode = currentNode.leftChild;
     }

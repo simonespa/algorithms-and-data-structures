@@ -1,5 +1,4 @@
 export default class NumericMinHeap {
-
   private heap: Array<number>;
 
   constructor(input: Array<number> = []) {

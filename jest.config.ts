@@ -1,7 +1,7 @@
 /**
  * @see https://jestjs.io/docs/configuration
  */
- const config = {
+const config = {
   // The directory where Jest should store its cached dependency information.
   cacheDirectory: '.jest',
 
@@ -21,7 +21,7 @@
   collectCoverage: true,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: ".coverage",
+  coverageDirectory: '.coverage',
 
   // A list of reporter names that Jest uses when writing coverage reports. Any istanbul reporter can be used.
   coverageReporters: ['text', 'lcov'],
@@ -38,29 +38,24 @@
       branches: 80,
       functions: 80,
       lines: 80,
-      statements: -30
-    }
+      statements: -30,
+    },
   },
 
   moduleNameMapper: {
-    'src/(.*)': '<rootDir>/src/$1'
+    'src/(.*)': '<rootDir>/src/$1',
   },
 
   // A preset that is used as a base for Jest's configuration.
   preset: 'ts-jest',
 
   // A list of paths to directories that Jest should use to search for files in.
-  roots: [
-    '<rootDir>/test',
-    '<rootDir>/src'
-  ],
+  roots: ['<rootDir>/test', '<rootDir>/src'],
 
   // The glob patterns Jest uses to detect test files.
-  testMatch: [
-    '**/?(*.)+(test).+(ts)'
-  ],
+  testMatch: ['**/?(*.)+(test).+(ts)'],
 
-  verbose: true
+  verbose: true,
 };
 
 export default config;

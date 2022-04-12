@@ -4,7 +4,7 @@ const parameters = [
   { n: -1, expected: 1 },
   { n: 0, expected: 1 },
   { n: 1, expected: 1 },
-  { n: 2, expected: 1 }
+  { n: 2, expected: 1 },
 ];
 
 test.each(parameters)('fibonacci($n) must be $expected', ({ n, expected }) => {

@@ -16,13 +16,13 @@ extends:
 env:
   node: true
 
-parser: "@typescript-eslint/parser"
+parser: '@typescript-eslint/parser'
 parserOptions:
   project:
-  - "./tsconfig.json"
+    - './tsconfig.json'
 
 plugins:
-  - "@typescript-eslint"
+  - '@typescript-eslint'
   - jest # https://github.com/jest-community/eslint-plugin-jest
 
 rules: # https://eslint.org/docs/rules
