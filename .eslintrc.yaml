@@ -6,6 +6,7 @@ root: true # to stop Eslint searching recursively for other configs in parent di
 
 extends:
   - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
   - plugin:@typescript-eslint/recommended
   - plugin:jest/recommended
   - plugin:jest/style
