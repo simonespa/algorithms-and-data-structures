@@ -11,7 +11,6 @@ import {
 } from 'src/algorithms/tree-traversal';
 import BinaryTree from 'src/data-structures/BinaryTree';
 
-
 /*
   Given the following rooted tree
 
@@ -32,7 +31,7 @@ import BinaryTree from 'src/data-structures/BinaryTree';
 const preOrder = [1, 2, 4, 3, 5, 7, 8, 6];
 const inOrder = [4, 2, 1, 7, 5, 8, 3, 6];
 const postOrder = [4, 2, 7, 8, 5, 6, 3, 1];
-const bfs = [1, 2, 3, 4, 5, 6, 7, 8]
+const bfs = [1, 2, 3, 4, 5, 6, 7, 8];
 
 const tree: BinaryTree<number> = new BinaryTree(1);
 
@@ -51,17 +50,17 @@ describe('Depth-first traversal', () => {
   describe('Pre-order Traversal', () => {
     describe('Recursive Algorithm', () => {
       test('recursivePreOrderTraversal', () => {
-        expect(recursivePreOrderTraversal(tree)).toEqual(preOrder)
+        expect(recursivePreOrderTraversal(tree)).toEqual(preOrder);
       });
     });
 
     describe('Iterative Algorithm', () => {
       test('iterativePreOrderTraversal', () => {
-        expect(iterativePreOrderTraversal(tree)).toEqual(preOrder)
+        expect(iterativePreOrderTraversal(tree)).toEqual(preOrder);
       });
 
       test('iterativePreOrderTraversalRightChildOnly', () => {
-        expect(iterativePreOrderTraversalRightChildOnly(tree)).toEqual(preOrder)
+        expect(iterativePreOrderTraversalRightChildOnly(tree)).toEqual(preOrder);
       });
     });
   });
@@ -69,17 +68,17 @@ describe('Depth-first traversal', () => {
   describe('In-order Traversal', () => {
     describe('Recursive Algorithm', () => {
       test('recursiveInOrderTraversal', () => {
-        expect(recursiveInOrderTraversal(tree)).toEqual(inOrder)
+        expect(recursiveInOrderTraversal(tree)).toEqual(inOrder);
       });
     });
 
     describe('Iterative Algorithm', () => {
       test('iterativeInOrderTraversal', () => {
-        expect(iterativeInOrderTraversal(tree)).toEqual(inOrder)
+        expect(iterativeInOrderTraversal(tree)).toEqual(inOrder);
       });
 
       test('iterativeInOrderTraversalWithDoubleWhile', () => {
-        expect(iterativeInOrderTraversalWithDoubleWhile(tree)).toEqual(inOrder)
+        expect(iterativeInOrderTraversalWithDoubleWhile(tree)).toEqual(inOrder);
       });
     });
   });
@@ -87,13 +86,13 @@ describe('Depth-first traversal', () => {
   describe('Post-order Traversal', () => {
     describe('Recursive Algorithm', () => {
       test('recursivePostOrderTraversal', () => {
-        expect(recursivePostOrderTraversal(tree)).toEqual(postOrder)
+        expect(recursivePostOrderTraversal(tree)).toEqual(postOrder);
       });
     });
 
     describe('Iterative Algorithm', () => {
       test('iterativePostOrderTraversal', () => {
-        expect(iterativePostOrderTraversal(tree)).toEqual(postOrder)
+        expect(iterativePostOrderTraversal(tree)).toEqual(postOrder);
       });
     });
   });
@@ -101,6 +100,6 @@ describe('Depth-first traversal', () => {
 
 describe('Breadth-first traversal', () => {
   test('breadthFirstTraversal', () => {
-    expect(breadthFirstTraversal(tree)).toEqual(bfs)
+    expect(breadthFirstTraversal(tree)).toEqual(bfs);
   });
 });

@@ -7,18 +7,20 @@ const parameters = [
   { targetSum: 7, numbers: [2, 4, 6], expected: null },
   { targetSum: 0, numbers: [3, 8, 9], expected: [] },
   { targetSum: -1, numbers: [5, 10, 22], expected: null },
-  { targetSum: 11, numbers: [], expected: null }
+  { targetSum: 11, numbers: [], expected: null },
 ];
 
-
-test.each(parameters)('howSum($targetSum, $numbers) must be $expected', ({ targetSum, numbers, expected }) => {
-  const output = howSum({ targetSum, numbers });
-  expect(output).toEqual(expected);
-});
+test.each(parameters)(
+  'howSum($targetSum, $numbers) must be $expected',
+  ({ targetSum, numbers, expected }) => {
+    const output = howSum({ targetSum, numbers });
+    expect(output).toEqual(expected);
+  }
+);
 
 test('test howSum with memoisation', () => {
   const targetSum = 999;
   const numbers: Array<number> = [2, 4];
   const output = howSum({ targetSum, numbers, memoised: true });
-  expect(output).toEqual(null);
+  expect(output).toBeNull();
 });

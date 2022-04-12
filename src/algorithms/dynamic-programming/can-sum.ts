@@ -11,7 +11,7 @@ function bruteForceCanSum(targetSum: number, numbers: Array<number>): boolean {
   if (targetSum === 0) return true;
   if (targetSum < 0) return false;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     if (bruteForceCanSum(targetSum - number, numbers)) return true;
   }
 
@@ -28,12 +28,16 @@ function bruteForceCanSum(targetSum: number, numbers: Array<number>): boolean {
  * @param numbers the array of numbers to combine.
  * @param buffer the buffer used for memoisation.
  */
-function memoisedCanSum(targetSum: number, numbers: Array<number>, buffer: { [key: number]: boolean } = {}): boolean {
+function memoisedCanSum(
+  targetSum: number,
+  numbers: Array<number>,
+  buffer: { [key: number]: boolean } = {}
+): boolean {
   if (targetSum in buffer) return buffer[targetSum];
   if (targetSum === 0) return true;
   if (targetSum < 0) return false;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     if (memoisedCanSum(targetSum - number, numbers, buffer)) {
       buffer[targetSum] = true;
       return true;

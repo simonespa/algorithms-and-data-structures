@@ -1,7 +1,9 @@
-export enum HeapType { MIN, MAX };
+export enum HeapType {
+  MIN,
+  MAX,
+}
 
 export default class NumericHeap {
-
   private heap: Array<number>;
   private heapType: HeapType;
 
@@ -17,7 +19,7 @@ export default class NumericHeap {
   }
 
   private buildHeap(currentIndex: number): void {
-    for (let index = currentIndex; index >= 0; index--) {
+    for (let index = currentIndex; index >= 0; index -= 1) {
       this.bubbleDown(index);
     }
   }
@@ -26,7 +28,10 @@ export default class NumericHeap {
     // If the current node is a leaf, exit
     if (this.isLeaf(currentIndex)) return;
     // Get the winner (min or max) child
-    const winnerChildIndex = this.getWinnerIndex(this.getLeftChildIndex(currentIndex), this.getRightChildIndex(currentIndex));
+    const winnerChildIndex = this.getWinnerIndex(
+      this.getLeftChildIndex(currentIndex),
+      this.getRightChildIndex(currentIndex)
+    );
     // If the winner child index wins against the current index
     if (this.isLeftTheWinnerIndex(winnerChildIndex, currentIndex)) {
       // swap positions
@@ -40,8 +45,8 @@ export default class NumericHeap {
    * Returns the min or max depending on the type of Heap.
    */
   private getWinnerIndex(indexOne: number, indexTwo: number): number {
-    let one = this.heap[indexOne];
-    let two = this.heap[indexTwo];
+    const one = this.heap[indexOne];
+    const two = this.heap[indexTwo];
 
     if (one === undefined) return indexTwo;
     if (two === undefined) return indexOne;
@@ -62,8 +67,8 @@ export default class NumericHeap {
    * @returns true if the left index is the winner
    */
   private isLeftTheWinnerIndex(leftIndex: number, rightIndex: number): boolean {
-    let one = this.heap[leftIndex];
-    let two = this.heap[rightIndex];
+    const one = this.heap[leftIndex];
+    const two = this.heap[rightIndex];
 
     if (this.heapType === HeapType.MAX && two > one) return false;
 

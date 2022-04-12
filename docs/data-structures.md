@@ -1,8 +1,9 @@
-  # Data structures
+# Data structures
 
-  ## Array
+## Array
 
-  ### Static array
-  - Access: O(1)
-  - Search: O(n)
-  - Insertion: 
+### Static array
+
+- Access: O(1)
+- Search: O(n)
+- Insertion:

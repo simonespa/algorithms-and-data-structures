@@ -24,29 +24,41 @@ function bruteForceGridTraveller(rows: number, columns: number): number {
  * @param columns the number of columns of the grid.
  * @param buffer buffer object used for memoisation.
  */
-function memoisedGridTraveller(rows: number, columns: number, buffer: { [key: string]: number } = {}): number {
+function memoisedGridTraveller(
+  rows: number,
+  columns: number,
+  buffer: { [key: string]: number } = {}
+): number {
   const key = `${rows}-${columns}`;
-  if(key in buffer) return buffer[key];
+  if (key in buffer) return buffer[key];
   if (rows <= 0 || columns <= 0) return 0;
   if (rows === 1 && columns === 1) return 1;
 
-  buffer[key] = memoisedGridTraveller(rows - 1, columns, buffer) + memoisedGridTraveller(rows, columns - 1, buffer);
+  buffer[key] =
+    memoisedGridTraveller(rows - 1, columns, buffer) +
+    memoisedGridTraveller(rows, columns - 1, buffer);
   return buffer[key];
 }
 
 /**
  *
  */
-function dedupedGridTraveller(rows: number, columns: number, buffer: { [key: string]: number } = {}): number {
+function dedupedGridTraveller(
+  rows: number,
+  columns: number,
+  buffer: { [key: string]: number } = {}
+): number {
   let key = `${rows}-${columns}`;
   if (columns < rows) {
     key = `${columns}-${rows}`;
   }
-  if(key in buffer) return buffer[key];
+  if (key in buffer) return buffer[key];
   if (rows <= 0 || columns <= 0) return 0;
   if (rows === 1 && columns === 1) return 1;
 
-  buffer[key] = dedupedGridTraveller(rows - 1, columns, buffer) + dedupedGridTraveller(rows, columns - 1, buffer);
+  buffer[key] =
+    dedupedGridTraveller(rows - 1, columns, buffer) +
+    dedupedGridTraveller(rows, columns - 1, buffer);
   return buffer[key];
 }
 

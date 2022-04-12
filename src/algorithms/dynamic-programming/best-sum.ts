@@ -13,7 +13,7 @@ function bruteForceBestSum(targetSum: number, numbers: Array<number>): Array<num
 
   let min: null | Array<number> = null;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     const remainder = targetSum - number;
     const bestSumResult = bruteForceBestSum(remainder, numbers);
     if (bestSumResult !== null) {
@@ -37,14 +37,18 @@ function bruteForceBestSum(targetSum: number, numbers: Array<number>): Array<num
  * @param numbers the array of numbers to combine.
  * @param buffer the buffer used for memoisation.
  */
-function memoisedBestSum(targetSum: number, numbers: Array<number>, buffer: {[index: string]:any} = {}): Array<number> | null {
+function memoisedBestSum(
+  targetSum: number,
+  numbers: Array<number>,
+  buffer: { [key: string]: Array<number> | null } = {}
+): Array<number> | null {
   if (targetSum in buffer) return buffer[targetSum];
   if (targetSum === 0) return [];
   if (targetSum < 0) return null;
 
   let min: null | Array<number> = null;
 
-  for (let number of numbers) {
+  for (const number of numbers) {
     const remainder = targetSum - number;
     const bestSumResult = memoisedBestSum(remainder, numbers, buffer);
     if (bestSumResult !== null) {
@@ -76,7 +80,7 @@ export interface BestSumParameters {
  *
  * Every element can be used an arbitrary number of times.
  */
-export default function bestSum(parameters: BestSumParameters): Array<number> | null{
+export default function bestSum(parameters: BestSumParameters): Array<number> | null {
   const { targetSum, numbers, memoised } = parameters;
 
   if (memoised) {

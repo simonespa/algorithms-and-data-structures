@@ -22,5 +22,5 @@ export default interface Queue<T> extends Collection<T> {
    * Returns the item at the top of the queue without removing it.
    * @returns {T | undefined} the item or undefined.
    */
-   peek(): T | undefined;
+  peek(): T | undefined;
 }

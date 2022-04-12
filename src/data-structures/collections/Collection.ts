@@ -6,10 +6,10 @@
  */
 export default interface Collection<T> {
   /**
-     * Returns the number of items in this collection.
-     *
-     * @return the number of items in this collection
-     */
+   * Returns the number of items in this collection.
+   *
+   * @return the number of items in this collection
+   */
   size(): number;
 
   /**

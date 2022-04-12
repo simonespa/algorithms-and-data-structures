@@ -1,5 +1,4 @@
 export default class NumericMaxHeap {
-
   private heap: Array<number>;
 
   constructor(input: Array<number> = []) {
@@ -13,7 +12,7 @@ export default class NumericMaxHeap {
   }
 
   private buildHeap(current: number): void {
-    for (let index = current; index >= 0; index--) {
+    for (let index = current; index >= 0; index -= 1) {
       this.bubbleDown(index);
     }
   }
@@ -67,8 +66,8 @@ export default class NumericMaxHeap {
   }
 
   private getMax(indexOne: number, indexTwo: number): number {
-    let one = this.heap[indexOne];
-    let two = this.heap[indexTwo];
+    const one = this.heap[indexOne];
+    const two = this.heap[indexTwo];
 
     if (one === undefined) return indexTwo;
     if (two === undefined) return indexOne;
