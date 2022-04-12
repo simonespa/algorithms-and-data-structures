@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "An open source collection and playground of algorithms, data structures and related documentation to brush up your knowledge of computer science fundamentals, or learn it from scratch.",
   "scripts": {
-    "check-types": "tsc",
+    "prepare": "husky install",
     "dev": "tsc --watch",
     "start": "ts-node",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "lint": "lint --dir .",
+    "lint:fix": "lint --fix --dir .",
+    "format": "prettier --write '**/*.{ts,js,json,yml,yaml,md}'",
+    "ts-check": "tsc --pretty"
   },
   "repository": {
     "type": "git",
