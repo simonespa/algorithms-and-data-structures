@@ -4,10 +4,10 @@ import {
   iterativePreOrderTraversalRightChildOnly,
   recursiveInOrderTraversal,
   iterativeInOrderTraversal,
+  iterativeInOrderTraversalWithDoubleWhile,
   recursivePostOrderTraversal,
   iterativePostOrderTraversal,
-  recursiveBreadthFirstTraversal,
-  iterativeBreadthFirstTraversal,
+  breadthFirstTraversal,
 } from 'src/algorithms/tree-traversal';
 import BinaryTree from 'src/data-structures/BinaryTree';
 
@@ -29,6 +29,10 @@ import BinaryTree from 'src/data-structures/BinaryTree';
   use DFS and BFS to traverse it
 */
 
+const preOrder = [1, 2, 4, 3, 5, 7, 8, 6];
+const inOrder = [4, 2, 1, 7, 5, 8, 3, 6];
+const postOrder = [4, 2, 7, 8, 5, 6, 3, 1];
+const bfs = [1, 2, 3, 4, 5, 6, 7, 8]
 
 const tree: BinaryTree<number> = new BinaryTree(1);
 
@@ -42,11 +46,6 @@ tree.rightChild.rightChild = new BinaryTree(6);
 
 tree.rightChild.leftChild.leftChild = new BinaryTree(7);
 tree.rightChild.leftChild.rightChild = new BinaryTree(8);
-
-const preOrder = [1, 2, 4, 3, 5, 7, 8, 6];
-const inOrder = [4, 2, 1, 7, 5, 8, 3, 6];
-const postOrder = [4, 2, 7, 8, 5, 6, 3, 1];
-const bfs = [1]
 
 describe('Depth-first traversal', () => {
   describe('Pre-order Traversal', () => {
@@ -78,6 +77,10 @@ describe('Depth-first traversal', () => {
       test('iterativeInOrderTraversal', () => {
         expect(iterativeInOrderTraversal(tree)).toEqual(inOrder)
       });
+
+      test('iterativeInOrderTraversalWithDoubleWhile', () => {
+        expect(iterativeInOrderTraversalWithDoubleWhile(tree)).toEqual(inOrder)
+      });
     });
   });
 
@@ -97,15 +100,7 @@ describe('Depth-first traversal', () => {
 });
 
 describe('Breadth-first traversal', () => {
-  describe('Recursive Algorithm', () => {
-    test('recursiveBreadthFirstTraversal', () => {
-      expect(recursiveBreadthFirstTraversal(tree)).toEqual(bfs)
-    });
-  });
-
-  describe('Iterative Algorithm', () => {
-    test('iterativeBreadthFirstTraversal', () => {
-      expect(iterativeBreadthFirstTraversal(tree)).toEqual(bfs)
-    });
+  test('breadthFirstTraversal', () => {
+    expect(breadthFirstTraversal(tree)).toEqual(bfs)
   });
 });
