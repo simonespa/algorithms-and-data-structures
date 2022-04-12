@@ -16,16 +16,24 @@ extends:
 env:
   node: true
 
-parser: '@typescript-eslint/parser'
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project:
+  - "./tsconfig.json"
 
 plugins:
-  - '@typescript-eslint'
+  - "@typescript-eslint"
   - jest # https://github.com/jest-community/eslint-plugin-jest
 
 rules: # https://eslint.org/docs/rules
   # Possible Problems - https://eslint.org/docs/rules/#possible-problems
   no-self-compare: error # https://eslint.org/docs/rules/no-self-compare
   no-unreachable-loop: error # https://eslint.org/docs/rules/no-unreachable-loop
+  no-use-before-define: # https://eslint.org/docs/rules/no-use-before-define
+    - error
+    - functions: true
+      classes: true
+      variables: true
   require-atomic-updates: # https://eslint.org/docs/rules/require-atomic-updates
     - error
     - allowProperties: true
@@ -73,7 +81,7 @@ rules: # https://eslint.org/docs/rules
   no-loop-func: error # https://eslint.org/docs/rules/no-loop-func
   no-multi-assign: error # https://eslint.org/docs/rules/no-multi-assign
   no-param-reassign: # https://eslint.org/docs/rules/no-param-reassign
-    - warn
+    - error
     - props: true
   no-plusplus: error # https://eslint.org/docs/rules/no-plusplus
   no-proto: error # https://eslint.org/docs/rules/no-proto
