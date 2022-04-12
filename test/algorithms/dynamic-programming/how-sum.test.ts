@@ -17,7 +17,7 @@ test.each(parameters)('howSum($targetSum, $numbers) must be $expected', ({ targe
 });
 
 test('test howSum with memoisation', () => {
-  const targetSum = 9999;
+  const targetSum = 999;
   const numbers: Array<number> = [2, 4];
   const output = howSum({ targetSum, numbers, memoised: true });
   expect(output).toEqual(null);

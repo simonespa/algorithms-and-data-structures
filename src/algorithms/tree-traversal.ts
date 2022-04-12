@@ -1,4 +1,4 @@
-import BinaryTree from '../git data-structures/BinaryTree';
+import BinaryTree from '../data-structures/BinaryTree';
 
 /**
  * Depth-First traversal (DFS)
