@@ -40,7 +40,7 @@ function bruteForceBestSum(targetSum: number, numbers: Array<number>): Array<num
 function memoisedBestSum(
   targetSum: number,
   numbers: Array<number>,
-  buffer: { [index: string]: any } = {}
+  buffer: { [key: string]: Array<number> | null } = {}
 ): Array<number> | null {
   if (targetSum in buffer) return buffer[targetSum];
   if (targetSum === 0) return [];

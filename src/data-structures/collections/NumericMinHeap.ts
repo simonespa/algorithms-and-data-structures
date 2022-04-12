@@ -12,7 +12,7 @@ export default class NumericMinHeap {
   }
 
   private buildHeap(current: number): void {
-    for (let index = current; index >= 0; index--) {
+    for (let index = current; index >= 0; index -= 1) {
       this.bubbleDown(index);
     }
   }

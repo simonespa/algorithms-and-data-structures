@@ -19,7 +19,7 @@ export default class NumericHeap {
   }
 
   private buildHeap(currentIndex: number): void {
-    for (let index = currentIndex; index >= 0; index--) {
+    for (let index = currentIndex; index >= 0; index -= 1) {
       this.bubbleDown(index);
     }
   }

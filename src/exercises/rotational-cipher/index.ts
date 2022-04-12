@@ -96,7 +96,7 @@ export function rotationalCipher(input, rotationFactor) {
   const inputArray = Array.from(input);
   const responseArray = new Array(inputArray.length);
 
-  for (let i = 0; i < inputArray.length; i++) {
+  for (let i = 0; i < inputArray.length; i += 1) {
     responseArray[i] = encrypt(inputArray[i], rotationFactor);
   }
 
