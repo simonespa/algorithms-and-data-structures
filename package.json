@@ -8,9 +8,9 @@
     "start": "ts-node",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint --ext .ts,.js .",
+    "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --dir .",
-    "format": "prettier --write '**/*.{ts,js,json,yml,yaml,md}'",
+    "format": "prettier --write '**/*.{ts,json,yml,yaml,md}'",
     "ts-check": "tsc --pretty"
   },
   "repository": {
