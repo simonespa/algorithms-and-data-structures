@@ -11,6 +11,7 @@ Given two positive integers A and B, determine the number of uniform integers be
 ```
 
 where N is an arbitrary MAX_INTEGER suported by the runtime.
+
 ## Sample test case 1
 
 ```
