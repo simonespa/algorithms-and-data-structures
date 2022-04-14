@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+Thanks for taking the time to contribute to this project! Please fill out this form as completely as possible.
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
