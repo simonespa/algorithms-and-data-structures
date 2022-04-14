@@ -7,8 +7,10 @@ assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+Thanks for taking the time to raise a feature request! Please fill out this form as completely as possible.
+
+**Describe the feature you'd like to request**
+A clear and concise description of what your idea is and what use case it satisfy.
 
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
