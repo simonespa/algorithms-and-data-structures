@@ -10,7 +10,7 @@ function init(A) {
  * @param {number} B
  * @return {number}
  */
-function getUniformIntegerCountInInterval(A, B) {
+export function getUniformIntegerCountInInterval(A, B) {
   // if A and B are less than or equal to 9
   if (B <= 9) {
     return B - A + 1;
