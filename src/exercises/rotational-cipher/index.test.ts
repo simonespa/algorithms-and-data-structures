@@ -1,4 +1,4 @@
-import { rotationalCipher } from 'src/exercises/rotational-cipher';
+import { rotationalCipher } from '.';
 
 const parameters = [
   {
