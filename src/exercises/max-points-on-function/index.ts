@@ -2,20 +2,20 @@ export function calculateFunction(px1, px2) {
   const [x1, y1] = px1;
   const [x2, y2] = px2;
   const gradient = (y2 - y1) / (x2 - x1);
-  const yIntercept = y1 - (gradient * x1);
+  const yIntercept = y1 - gradient * x1;
 
   return {
     key: `${gradient}X+${yIntercept}`,
     gradient,
-    yIntercept
-  }
+    yIntercept,
+  };
 }
 
 export function isInFunction(px, currentFunction) {
   const [X, Y] = px;
   const { gradient: a, yIntercept: b } = currentFunction;
 
-  return Y === (a * X + b);
+  return Y === a * X + b;
 }
 
 export function maxPoints(points) {
@@ -41,7 +41,7 @@ export function maxPoints(points) {
     // scan the array to get the second point
     while (px1 < N) {
       if (isInFunction(points[px1], currentFunction)) {
-        numberOfPoints++
+        numberOfPoints++;
       }
       px1++;
     }
@@ -52,8 +52,8 @@ export function maxPoints(points) {
     // add the function to the set of already calculated ones
     functionSet.add(currentFunction.key);
     // increment to the next point
-    px0++
+    px0++;
   }
 
   return maxNumberOfPoints;
-};
+}

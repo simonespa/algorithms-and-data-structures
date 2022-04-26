@@ -6,9 +6,9 @@ Return the max sliding window.
 
 ## Constraints
 
-* `1 <= nums.length <= 105`
-* `-104 <= nums[i] <= 104`
-* `1 <= k <= nums.length`
+- `1 <= nums.length <= 105`
+- `-104 <= nums[i] <= 104`
+- `1 <= k <= nums.length`
 
 ## Example 1
 

@@ -5,6 +5,6 @@
 //   expect(maxPoints(points)).toBe(4);
 // })
 
-test('', () =>{
+test('', () => {
   expect(3).toBe(3);
 });
