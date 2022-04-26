@@ -3,7 +3,7 @@ export default class BinaryTree<T> {
   leftChild: BinaryTree<T> = null;
   rightChild: BinaryTree<T> = null;
 
-  constructor(value?: T) {
+  constructor(value: T) {
     this.value = value;
   }
 }
