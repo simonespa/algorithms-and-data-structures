@@ -1,4 +1,4 @@
-import { isValidBST } from 'src/algorithms/valid-bst';
+import { isValidBST } from 'src/exercises/valid-binary-search-tree';
 import BinaryTree from 'src/data-structures/BinaryTree';
 
 const root1 = new BinaryTree<number>(4);

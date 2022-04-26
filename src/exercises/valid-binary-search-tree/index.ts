@@ -1,4 +1,4 @@
-import BinaryTree from '../data-structures/BinaryTree';
+import BinaryTree from '../../data-structures/BinaryTree';
 
 export function isValidBST(
   node: BinaryTree<number>,
