@@ -4,7 +4,6 @@ about: Suggest an idea for this project
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 Thanks for taking the time to contribute to this project! Please fill out this form as completely as possible.
