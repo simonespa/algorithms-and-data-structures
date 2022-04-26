@@ -10,14 +10,14 @@ root1.leftChild.rightChild = new BinaryTree<number>(3);
 const parameters = [
   {
     tree: null,
-    expected: true
+    expected: true,
   },
   {
     tree: root1,
-    expected: true
-  }
-]
+    expected: true,
+  },
+];
 
 test.each(parameters)('isValidBST', ({ tree, expected }) => {
   expect(isValidBST(tree)).toBe(expected);
-})
+});

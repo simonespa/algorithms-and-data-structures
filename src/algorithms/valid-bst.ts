@@ -1,6 +1,10 @@
 import BinaryTree from '../data-structures/BinaryTree';
 
-export function isValidBST(node: BinaryTree<number>, left: BinaryTree<number> = null, right: BinaryTree<number> = null): boolean {
+export function isValidBST(
+  node: BinaryTree<number>,
+  left: BinaryTree<number> = null,
+  right: BinaryTree<number> = null
+): boolean {
   // Base case: a null subtree is a valid BST
   if (node === null) return true;
 

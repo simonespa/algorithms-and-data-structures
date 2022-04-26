@@ -53,7 +53,6 @@ rules: # https://eslint.org/docs/rules
     - error
     - allowParens: false
   no-console: error # https://eslint.org/docs/rules/no-console
-  no-continue: error # https://eslint.org/docs/rules/no-continue
   no-else-return: # https://eslint.org/docs/rules/no-else-return
     - error
     - allowElseIf: false
@@ -73,10 +72,6 @@ rules: # https://eslint.org/docs/rules
   no-lonely-if: error # https://eslint.org/docs/rules/no-lonely-if
   no-loop-func: error # https://eslint.org/docs/rules/no-loop-func
   no-multi-assign: error # https://eslint.org/docs/rules/no-multi-assign
-  no-param-reassign: # https://eslint.org/docs/rules/no-param-reassign
-    - warn
-    - props: true
-  no-plusplus: error # https://eslint.org/docs/rules/no-plusplus
   no-proto: error # https://eslint.org/docs/rules/no-proto
   no-return-assign: error # https://eslint.org/docs/rules/no-return-assign
   no-return-await: error # https://eslint.org/docs/rules/no-return-await
