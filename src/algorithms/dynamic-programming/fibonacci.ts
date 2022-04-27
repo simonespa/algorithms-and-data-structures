@@ -1,48 +1,24 @@
 /**
- * - Time complexity: O(2^n)
- * - Space complexity: O(n)
- *
- * @param n the nth element in the Fibonacci sequence.
- */
-function bruteForceFibonacci(n: number): number {
-  if (n <= 2) return 1;
-
-  return bruteForceFibonacci(n - 1) + bruteForceFibonacci(n - 2);
-}
-
-/**
- * - Time complexity: O(n)
- * - Space complexity: O(n)
- *
- * @param n the nth element in the Fibonacci sequence.
- * @param buffer buffer object used for memoisation.
- */
-function memoisedFibonacci(n: number, buffer: { [key: number]: number } = {}): number {
-  if (n in buffer) return buffer[n];
-  if (n <= 2) return 1;
-
-  buffer[n] = memoisedFibonacci(n - 1, buffer) + memoisedFibonacci(n - 2, buffer);
-  return buffer[n];
-}
-
-/**
- * @param n the nth element in the Fibonacci sequence.
- * @param memoised true to optimise the recursive function by caching the intermediate responses.
- */
-export interface FibonacciParameters {
-  n: number;
-  memoised?: boolean;
-}
-
-/**
  * Return the nth element of the Fibonacci sequence.
+ *
+ * This algorithm is implemented with the classical
+ * recursive approach and made efficient using memoisation.
+ *
+ * The brute force solution has the following complexity:
+ * - Time O(2^n)
+ * - Space O(n)
+ *
+ * The memoised version has the following complexity:
+ * - Time O(n)
+ * - Space O(n)
+ *
+ * @param n the nth element in the Fibonacci sequence.
  */
-export default function fibonacci(parameters: FibonacciParameters): number {
-  const { n, memoised } = parameters;
+export default function fibonacci(n: number, buffer: object = {}): number {
+  if (n in buffer) return buffer[n];
+  if (n <= 0) return 0;
+  if (n <= 2) return 1;
 
-  if (memoised) {
-    return memoisedFibonacci(n);
-  }
-
-  return bruteForceFibonacci(n);
+  buffer[n] = fibonacci(n - 1, buffer) + fibonacci(n - 2, buffer);
+  return buffer[n];
 }
