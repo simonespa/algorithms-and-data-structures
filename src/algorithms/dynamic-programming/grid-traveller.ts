@@ -1,93 +1,46 @@
 /**
- * - Time complexity: O(2^n+m)
- * - Space complexity: O(n+m)
  *
- * where "n" is the number of rows and "m" the number of columns.
- *
- * @param rows the number of rows of the grid.
- * @param columns the number of columns of the grid.
+ * @param rows the number of rows of the grid
+ * @param columns the number of columns of the grid
+ * @param buffer the buffer used for memoisation
+ * @returns how many ways there are to travel on a n by m grid
  */
-function bruteForceGridTraveller(rows: number, columns: number): number {
-  if (rows === 0 || columns === 0) return 0;
-  if (rows === 1 && columns === 1) return 1;
-
-  return bruteForceGridTraveller(rows - 1, columns) + bruteForceGridTraveller(rows, columns - 1);
-}
-
-/**
- * - Time complexity: O(n+m)
- * - Space complexity: O(n+m)
- *
- * where "n" is the number of rows and "m" the number of columns.
- *
- * @param rows the number of rows of the grid.
- * @param columns the number of columns of the grid.
- * @param buffer buffer object used for memoisation.
- */
-function memoisedGridTraveller(
-  rows: number,
-  columns: number,
-  buffer: { [key: string]: number } = {}
-): number {
-  const key = `${rows}-${columns}`;
+export default function gridTraveller(rows: number, columns: number, buffer: object = {}): number {
+  const key = getKey(rows, columns);
   if (key in buffer) return buffer[key];
   if (rows <= 0 || columns <= 0) return 0;
-  if (rows === 1 && columns === 1) return 1;
+  if (rows === 1 || columns === 1) return 1;
 
   buffer[key] =
-    memoisedGridTraveller(rows - 1, columns, buffer) +
-    memoisedGridTraveller(rows, columns - 1, buffer);
+    // travels down in the grid (decrement the row)
+    gridTraveller(rows - 1, columns, buffer) +
+    // travels right in the grid (decrement the column)
+    gridTraveller(rows, columns - 1, buffer);
+
   return buffer[key];
 }
 
 /**
+ * Return a key built out of the input parameters.
  *
+ * This snippet creates a key to de-dupe the entries in the buffer.
+ *
+ * The key uses a separator to prevent collisions. Without separator
+ * we may have this situation "789" where it is unclear whether
+ * n = 7 and m = 89 or n = 78 and m = 9
+ *
+ * Given (n = 7, m = 3) and (n = 3, m = 7) have the same result,
+ * the ksy is also normalised with the first element before the
+ * separator being less or equal than the second element.
+ *
+ * @param rows the number of rows of the grid
+ * @param columns the number of columns of the grid
+ * @returns a key to be used in the buffer object
  */
-function dedupedGridTraveller(
-  rows: number,
-  columns: number,
-  buffer: { [key: string]: number } = {}
-): number {
-  let key = `${rows}-${columns}`;
+function getKey(rows: number, columns: number) {
   if (columns < rows) {
-    key = `${columns}-${rows}`;
-  }
-  if (key in buffer) return buffer[key];
-  if (rows <= 0 || columns <= 0) return 0;
-  if (rows === 1 && columns === 1) return 1;
-
-  buffer[key] =
-    dedupedGridTraveller(rows - 1, columns, buffer) +
-    dedupedGridTraveller(rows, columns - 1, buffer);
-  return buffer[key];
-}
-
-/**
- * @param rows the number of rows of the grid.
- * @param columns the number of columns of the grid.
- * @param memoised true to optimise the recursive function by caching the intermediate responses.
- * @param deduped true to optimise the recursive function by removing duplicate branch in the tree.
- */
-export interface GridTravellerParameters {
-  rows: number;
-  columns: number;
-  memoised?: boolean;
-  deduped?: boolean;
-}
-
-/**
- * Returns the number of path reachable from the top left corner to the bottom right one in a N x M grid.
- */
-export default function gridTraveller(parameters: GridTravellerParameters): number {
-  const { rows, columns, memoised, deduped } = parameters;
-
-  if (deduped) {
-    return dedupedGridTraveller(rows, columns);
+    return `${columns}-${rows}`;
   }
 
-  if (memoised) {
-    return memoisedGridTraveller(rows, columns);
-  }
-
-  return bruteForceGridTraveller(rows, columns);
+  return `${rows}-${columns}`;
 }
