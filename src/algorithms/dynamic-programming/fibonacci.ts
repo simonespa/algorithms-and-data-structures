@@ -4,11 +4,11 @@
  * This algorithm is implemented with the classical
  * recursive approach and made efficient using memoisation.
  *
- * The brute force solution has the following complexity:
+ * The brute-force approach has the following complexity:
  * - Time O(2^n)
  * - Space O(n)
  *
- * The memoised version has the following complexity:
+ * The efficient version has the following complexity:
  * - Time O(n)
  * - Space O(n)
  *

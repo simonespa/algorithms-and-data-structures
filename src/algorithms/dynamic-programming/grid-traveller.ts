@@ -1,4 +1,17 @@
 /**
+ * Return the number of ways there are to travel a N x M grid,
+ * where N is the number of rows and M is the number of columns.
+ *
+ * This algorithm is implemented recursively with memoisation and de-duplication
+ * of keys in the buffer.
+ *
+ * The brute-force approach has the following complexity:
+ * - Time O(2^(n+m))
+ * - Space O(n+m)
+ *
+ * The efficient version has the following complexity:
+ * - Time O(n+m)
+ * - Space O(n+m)
  *
  * @param rows the number of rows of the grid
  * @param columns the number of columns of the grid
