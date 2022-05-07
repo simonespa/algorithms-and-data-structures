@@ -4,15 +4,21 @@
  * This algorithm is implemented with the classical
  * recursive approach and made efficient using memoisation.
  *
- * The brute-force approach has the following complexity:
+ * The brute-force implementation has the following complexity:
  * - Time O(2^n)
  * - Space O(n)
  *
- * The efficient version has the following complexity:
+ * The memoised version has the following complexity:
  * - Time O(n)
  * - Space O(n)
  *
- * @param n the nth element in the Fibonacci sequence.
+ * Where
+ * - 2 is the number of time the function is recursively called each time (branching factor)
+ * - "n" is the index of the nth element (height of the tree)
+ *
+ * @param n the index of the nth element in the Fibonacci sequence.
+ * @param buffer the object used for memoisation
+ * @returns the nth element in the Fibonacci sequence.
  */
 export default function fibonacci(n: number, buffer: object = {}): number {
   if (n in buffer) return buffer[n];

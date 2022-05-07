@@ -5,18 +5,24 @@
  * This algorithm is implemented recursively with memoisation and de-duplication
  * of keys in the buffer.
  *
- * The brute-force approach has the following complexity:
+ * The brute-force implementation has the following complexity:
  * - Time O(2^(n+m))
  * - Space O(n+m)
  *
- * The efficient version has the following complexity:
+ * The memoised and de-duped version has the following complexity:
  * - Time O(n+m)
  * - Space O(n+m)
  *
+ * Where
+ * - 2 is the number of time the function is recursively called each time (branching factor)
+ * - "n" is the number of rows of the grid
+ * - "m" is the number of columns of the grid
+ * - "n+m" is the maximum number of steps we descend in tree in the worst case scenario (tree height)
+ *
  * @param rows the number of rows of the grid
  * @param columns the number of columns of the grid
- * @param buffer the buffer used for memoisation
- * @returns how many ways there are to travel on a n by m grid
+ * @param buffer the object used for memoisation
+ * @returns the total number of ways to travel on a N by M grid
  */
 export default function gridTraveller(rows: number, columns: number, buffer: object = {}): number {
   const key = getKey(rows, columns);

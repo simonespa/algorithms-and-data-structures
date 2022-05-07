@@ -34,13 +34,13 @@ const parameters = [
   { rows: 10, columns: 10, expected: 48620 },
   { rows: 20, columns: 20, expected: 35345263800 },
   { rows: 30, columns: 30, expected: 30067266499541040 },
-  { rows: 40, columns: 40, expected: 2.7217014869199036e+22 },
-  { rows: 50, columns: 50, expected: 2.5477612258980867e+28 },
-  { rows: 60, columns: 60, expected: 2.4356699707654625e+34 },
-  { rows: 70, columns: 70, expected: 2.362398517571512e+40 },
-  { rows: 80, columns: 80, expected: 2.3156006494021195e+46 },
-  { rows: 90, columns: 90, expected: 2.288017424736007e+52 },
-  { rows: 100, columns: 100, expected: 2.2750883079422938e+58 },
+  { rows: 40, columns: 40, expected: 2.7217014869199036e22 },
+  { rows: 50, columns: 50, expected: 2.5477612258980867e28 },
+  { rows: 60, columns: 60, expected: 2.4356699707654625e34 },
+  { rows: 70, columns: 70, expected: 2.362398517571512e40 },
+  { rows: 80, columns: 80, expected: 2.3156006494021195e46 },
+  { rows: 90, columns: 90, expected: 2.288017424736007e52 },
+  { rows: 100, columns: 100, expected: 2.2750883079422938e58 },
 ];
 
 test.each(parameters)(

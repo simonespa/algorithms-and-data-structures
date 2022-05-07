@@ -1,4 +1,4 @@
-import howSum from 'src/algorithms/dynamic-programming/how-sum';
+import howSum from './how-sum';
 
 const parameters = [
   { targetSum: 10, numbers: [5, 7, 3, 2, 1], expected: [5, 5] },
@@ -11,16 +11,8 @@ const parameters = [
 ];
 
 test.each(parameters)(
-  'howSum($targetSum, $numbers) must be $expected',
+  'howSum($targetSum, $numbers) = $expected',
   ({ targetSum, numbers, expected }) => {
-    const output = howSum({ targetSum, numbers });
-    expect(output).toEqual(expected);
+    expect(howSum(targetSum, numbers)).toEqual(expected);
   }
 );
-
-test('test howSum with memoisation', () => {
-  const targetSum = 999;
-  const numbers: Array<number> = [2, 4];
-  const output = howSum({ targetSum, numbers, memoised: true });
-  expect(output).toBeNull();
-});
