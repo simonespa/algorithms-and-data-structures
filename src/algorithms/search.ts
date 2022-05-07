@@ -6,6 +6,13 @@ export function linearSearch(target: number, sequence: number[]): boolean {
   return false;
 }
 
+/**
+ * Searches the target number within the sequence.
+ *
+ * @param target the target number to search
+ * @param sequence the sequence of number (must be sorted)
+ * @returns true if the target number has been found in the sequence
+ */
 export function binarySearch(target: number, sequence: number[]): boolean {
   let start = 0;
   let end = sequence.length - 1;
