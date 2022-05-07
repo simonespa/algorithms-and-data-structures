@@ -7,7 +7,7 @@ Check the signs of the two numbers
     - do the difference
     - use the picked sign
 */
-function getSum(a: number, b: number): number {
+export function getSum(a: number, b: number): number {
   let x = `${a}`;
   let y = `${b}`;
 
