@@ -50,7 +50,7 @@ const config = {
   preset: 'ts-jest',
 
   // A list of paths to directories that Jest should use to search for files in.
-  roots: ['<rootDir>/src', '<rootDir>/test'],
+  roots: ['<rootDir>/src'],
 
   // The glob patterns Jest uses to detect test files.
   testMatch: ['**/?(*.)+(test).+(ts)'],

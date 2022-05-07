@@ -1,4 +1,4 @@
-import { getUniformIntegerCountInInterval } from 'src/exercises/uniform-integers';
+import { getUniformIntegerCountInInterval } from '.';
 
 const parameters = [
   {
