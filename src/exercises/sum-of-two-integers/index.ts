@@ -34,37 +34,37 @@ function getSum(a: number, b: number): number {
     }
 
     return Number(`-${counter}`);
-  } else if (x === y) {
+  }
+  if (x === y) {
     return 0;
-  } else {
-    let sign = '';
+  }
+  let sign = '';
 
-    if (Number(x) > Number(y)) {
-      let counter = Number(x);
+  if (Number(x) > Number(y)) {
+    let counter = Number(x);
 
-      for (let i = 0; i < Number(y); i++) {
-        counter--;
-      }
-
-      if (xSign === '-') {
-        sign = '-';
-      }
-
-      return Number(`${sign}${counter}`);
-    }
-
-    let counter = Number(y);
-
-    for (let i = 0; i < Number(x); i++) {
+    for (let i = 0; i < Number(y); i++) {
       counter--;
     }
 
-    if (ySign === '-') {
+    if (xSign === '-') {
       sign = '-';
     }
 
     return Number(`${sign}${counter}`);
   }
+
+  let counter = Number(y);
+
+  for (let i = 0; i < Number(x); i++) {
+    counter--;
+  }
+
+  if (ySign === '-') {
+    sign = '-';
+  }
+
+  return Number(`${sign}${counter}`);
 }
 
 function getSign(n: string): string {
