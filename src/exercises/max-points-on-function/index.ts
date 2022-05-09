@@ -1,8 +1,17 @@
-export function calculateFunction(px1, px2) {
-  const [x1, y1] = px1;
-  const [x2, y2] = px2;
-  const gradient = (y2 - y1) / (x2 - x1);
-  const yIntercept = y1 - gradient * x1;
+interface LinearFunction {
+  gradient: number,
+  yIntercept: number,
+  key: string
+}
+
+interface Point {
+  x: number,
+  y: number
+}
+
+function getFunction(p0: Point, p1: Point): LinearFunction {
+  const gradient = (p1.y - p0.y) / (p1.x - p0.x);
+  const yIntercept = p0.y - gradient * p0.x;
 
   return {
     key: `${gradient}X+${yIntercept}`,
@@ -11,49 +20,55 @@ export function calculateFunction(px1, px2) {
   };
 }
 
-export function isInFunction(px, currentFunction) {
-  const [X, Y] = px;
-  const { gradient: a, yIntercept: b } = currentFunction;
+function satisfyEquation(p: Point, func: LinearFunction): boolean {
+  const { gradient: a, yIntercept: b } = func;
 
-  return Y === a * X + b;
+  return p.y === (a * p.x + b);
 }
 
-export function maxPoints(points) {
-  let px0 = 0;
-  const N = points.length;
+export function maxPoints(points: Point[]): number {
+  // zero or negative
+  if (points.length < 1) return 0;
+  // 1 or 2
+  if (points.length < 3) return points.length;
 
-  const functionSet = new Set();
-  let maxNumberOfPoints = 0;
+  let i = 0;
+  const map = new Map();
 
-  // scan the first point
-  while (px0 < N - 1) {
-    let px1 = px0 + 1;
-    // calculate the function between the two points
-    const currentFunction = calculateFunction(points[px0], points[px1]);
-    // if the function was already calculated skip this entire loop
-    if (functionSet.has(currentFunction.key)) {
-      px0++;
-      continue;
-    }
-    // reset the counter for the number of points on the current function
-    let numberOfPoints = 2;
-    px1 += 1;
-    // scan the array to get the second point
-    while (px1 < N) {
-      if (isInFunction(points[px1], currentFunction)) {
-        numberOfPoints++;
+  let max = 0;
+
+  while (i < points.length - 1) {
+    let j = i + 1;
+    const p0 = points[i];
+    const p1 = points[j];
+
+    const func = getFunction(p0, p1);
+    map.set(func.key, 2);
+
+    j++;
+
+    while (j < points.length) {
+      if (satisfyEquation(points[j], func)) {
+        let counter = map.get(func.key);
+        if (counter) {
+          counter++;
+          map.set(func.key, counter);
+          if (counter > max) {
+            max = counter;
+          }
+        } else {
+          map.set(func.key, 2);
+          if (max < 2) {
+            max = 2;
+          }
+        }
       }
-      px1++;
+
+      j++;
     }
-    // setting the new maximum
-    if (numberOfPoints > maxNumberOfPoints) {
-      maxNumberOfPoints = numberOfPoints;
-    }
-    // add the function to the set of already calculated ones
-    functionSet.add(currentFunction.key);
-    // increment to the next point
-    px0++;
+
+    i++;
   }
 
-  return maxNumberOfPoints;
+  return max;
 }
