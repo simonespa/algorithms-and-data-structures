@@ -1,12 +1,12 @@
 interface LinearFunction {
-  gradient: number,
-  yIntercept: number,
-  key: string
+  gradient: number;
+  yIntercept: number;
+  key: string;
 }
 
 interface Point {
-  x: number,
-  y: number
+  x: number;
+  y: number;
 }
 
 function getFunction(p0: Point, p1: Point): LinearFunction {
@@ -23,7 +23,7 @@ function getFunction(p0: Point, p1: Point): LinearFunction {
 function satisfyEquation(p: Point, func: LinearFunction): boolean {
   const { gradient: a, yIntercept: b } = func;
 
-  return p.y === (a * p.x + b);
+  return p.y === a * p.x + b;
 }
 
 export function maxPoints(points: Point[]): number {
