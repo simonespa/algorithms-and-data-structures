@@ -7,29 +7,29 @@ This repo is an open source collection and playground of algorithms, data struct
 Install all dependencies
 
 ```
-npm install
+pnpm install
 ```
 
 To play around with the data structures and algorithms and create your own stuff, run TS in watch mode in order to get incremental compilation errors while you code
 
 ```
-npm run dev
+pnpm dev
 ```
 
 You can run a TS script
 
 ```
-npm start <path/to/the/file.ts>
+pnpm start <path/to/the/file.ts>
 ```
 
 You can also write tests and run the entire suite once
 
 ```
-npm run test
+pnpm test
 ```
 
 or run it in watch mode
 
 ```
-npm run test:watch
+pnpm test:watch
 ```
