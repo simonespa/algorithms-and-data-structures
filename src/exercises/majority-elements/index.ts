@@ -15,4 +15,4 @@ export function majority(nums: number[]): number {
 
       map.set(num, counter)
   }
-};
+}
