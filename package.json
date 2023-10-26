@@ -10,8 +10,8 @@
     "test:watch": "jest --watch",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts .",
-    "format": "prettier --write '**/**/*.{ts,json,yml,yaml,md}'",
-    "ts-check": "tsc --pretty"
+    "pretty": "prettier --write '**/**/*.{ts,json,yml,yaml,md}'",
+    "ts": "tsc --pretty"
   },
   "repository": {
     "type": "git",

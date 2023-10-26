@@ -57,5 +57,5 @@ test.each(parameters)(
   'canSum($targetSum, $numbers) = $expected',
   ({ targetSum, numbers, expected }) => {
     expect(canSum(targetSum, numbers)).toBe(expected);
-  }
+  },
 );

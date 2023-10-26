@@ -73,10 +73,10 @@ test.each(parameters)(
   ({ start, end, isException, expected }) => {
     if (isException) {
       expect(() => getUniformIntegerCountInInterval(start, end)).toThrow(
-        'The two numbers in input must be integers'
+        'The two numbers in input must be integers',
       );
     } else {
       expect(getUniformIntegerCountInInterval(start, end)).toBe(expected);
     }
-  }
+  },
 );

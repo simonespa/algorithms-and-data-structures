@@ -47,5 +47,5 @@ test.each(parameters)(
   'gridTraveller($rows, $columns) = $expected',
   ({ rows, columns, expected }) => {
     expect(gridTraveller(rows, columns)).toEqual(expected);
-  }
+  },
 );
