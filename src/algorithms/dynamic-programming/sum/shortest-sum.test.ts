@@ -15,5 +15,5 @@ test.each(parameters)(
   'shortestSum($targetSum, $numbers) = $expected',
   ({ targetSum, numbers, expected }) => {
     expect(shortestSum(targetSum, numbers)).toEqual(expected);
-  }
+  },
 );

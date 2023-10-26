@@ -14,5 +14,5 @@ test.each(parameters)(
   'howSum($targetSum, $numbers) = $expected',
   ({ targetSum, numbers, expected }) => {
     expect(howSum(targetSum, numbers)).toEqual(expected);
-  }
+  },
 );

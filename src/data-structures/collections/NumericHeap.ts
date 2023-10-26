@@ -30,7 +30,7 @@ export default class NumericHeap {
     // Get the winner (min or max) child
     const winnerChildIndex = this.getWinnerIndex(
       this.getLeftChildIndex(currentIndex),
-      this.getRightChildIndex(currentIndex)
+      this.getRightChildIndex(currentIndex),
     );
     // If the winner child index wins against the current index
     if (this.isLeftTheWinnerIndex(winnerChildIndex, currentIndex)) {

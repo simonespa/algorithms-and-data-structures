@@ -28,7 +28,7 @@
 export default function shortestSum(
   targetSum: number,
   numbers: number[],
-  buffer: object = {}
+  buffer: object = {},
 ): number[] | null {
   if (targetSum in buffer) return buffer[targetSum];
   if (targetSum === 0) return [];
