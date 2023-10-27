@@ -29,12 +29,12 @@ test('Test 2', async () => {
 test('Test 3', async () => {
   const timeLimitedCache = new TimeLimitedCache();
 
-  const duration = 1000;
+  const duration = 500;
 
   expect(timeLimitedCache.set(1, 42, duration)).toBe(false);
   expect(timeLimitedCache.set(2, 100, duration)).toBe(false);
 
-  await sleep(duration);
+  await sleep(duration + 200);
 
   expect(timeLimitedCache.count()).toBe(0);
 });
