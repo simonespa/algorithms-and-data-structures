@@ -67,7 +67,7 @@ function merge(left: Array<number>, right: Array<number>, order: SortingOrder): 
  * @param input the array of numbers to sort.
  * @param order specify the order of sorting: ascending or descending.
  */
-export default function mergeSort(input: Array<number>, order: SortingOrder): Array<number> {
+export default function mergeSort(input: Array<number> | null, order: SortingOrder): Array<number> | null {
   if (!Array.isArray(input) || input.length <= 1) return input;
 
   const splitInput: Split = split(input);

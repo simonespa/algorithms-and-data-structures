@@ -2,18 +2,14 @@
   "compilerOptions": {
     "module": "nodenext",
     "target": "es2022",
-    "outDir": "dist",
+    "paths": {
+      "@src/*": ["./src/*"]
+    },
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16"
-  },
-  "include": [
-    "src/**/*",
-    "tests/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  }
 }

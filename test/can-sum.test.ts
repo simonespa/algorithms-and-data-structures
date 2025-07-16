@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import canSum from './can-sum.ts';
+import canSum from '@src/algorithms/dynamic-programming/sum/can-sum.ts';
 
 describe("canSum", function () {
   const tests = [
@@ -56,7 +56,7 @@ describe("canSum", function () {
   ];
 
   tests.forEach(({ targetSum, numbers, expected }) => {
-    test(`${targetSum} and [${numbers}] should return ${expected}`, function () {
+    it(`${targetSum} and [${numbers}] should return ${expected}`, function () {
       expect(canSum(targetSum, numbers)).equal(expected);
     });
   });
