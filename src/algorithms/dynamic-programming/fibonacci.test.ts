@@ -27,7 +27,7 @@ describe("fibonacci", function () {
   ];
 
   tests.forEach(({ n, expected }) => {
-    test(`fibonacci(${n}) should return ${expected}`, function () {
+    it(`fibonacci(${n}) should return ${expected}`, function () {
       expect(fibonacci(n)).to.equal(expected);
     });
   });

@@ -56,7 +56,7 @@ describe("canSum", function () {
   ];
 
   tests.forEach(({ targetSum, numbers, expected }) => {
-    test(`${targetSum} and [${numbers}] should return ${expected}`, function () {
+    it(`${targetSum} and [${numbers}] should return ${expected}`, function () {
       expect(canSum(targetSum, numbers)).equal(expected);
     });
   });

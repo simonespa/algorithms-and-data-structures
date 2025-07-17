@@ -13,8 +13,8 @@ describe("howSum", function () {
   ];
 
   tests.forEach(({ targetSum, numbers, expected }) => {
-    test(`${targetSum} and [${numbers}] should return [${expected}]`, function () {
-      expect(howSum(targetSum, numbers)).equal(expected);
+    it(`${targetSum} and [${numbers}] should return [${expected}]`, function () {
+      expect(howSum(targetSum, numbers)).to.deep.equal(expected);
     });
   });
 });

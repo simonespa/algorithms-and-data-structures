@@ -47,7 +47,7 @@ describe("mergeSort", function () {
   ];
 
   tests.forEach(({ input, sortingOrder, expected }) => {
-    test(`mergeSort(${JSON.stringify(input)}, ${sortingOrder}) should return ${JSON.stringify(expected)}`, function () {
+    it(`mergeSort(${JSON.stringify(input)}, ${sortingOrder}) should return ${JSON.stringify(expected)}`, function () {
       expect(mergeSort(input, sortingOrder)).to.deep.equal(expected);
     });
   });

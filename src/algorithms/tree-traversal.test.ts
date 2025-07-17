@@ -51,58 +51,58 @@ describe('Tree Traversal Algorithms', () => {
   describe('Depth-first Approach', () => {
     describe('Pre-order Traversal', () => {
       describe('Recursive Algorithm', () => {
-        test('recursivePreOrderTraversal', () => {
-          expect(recursivePreOrderTraversal(tree)).equal(preOrder);
+        it('recursivePreOrderTraversal', () => {
+          expect(recursivePreOrderTraversal(tree)).to.deep.equal(preOrder);
         });
       });
 
       describe('Iterative Algorithm', () => {
-        test('iterativePreOrderTraversal', () => {
-          expect(iterativePreOrderTraversal(tree)).equal(preOrder);
+        it('iterativePreOrderTraversal', () => {
+          expect(iterativePreOrderTraversal(tree)).to.deep.equal(preOrder);
         });
 
-        test('iterativePreOrderTraversalRightChildOnly', () => {
-          expect(iterativePreOrderTraversalRightChildOnly(tree)).equal(preOrder);
+        it('iterativePreOrderTraversalRightChildOnly', () => {
+          expect(iterativePreOrderTraversalRightChildOnly(tree)).to.deep.equal(preOrder);
         });
       });
     });
 
     describe('In-order Traversal', () => {
       describe('Recursive Algorithm', () => {
-        test('recursiveInOrderTraversal', () => {
-          expect(recursiveInOrderTraversal(tree)).equal(inOrder);
+        it('recursiveInOrderTraversal', () => {
+          expect(recursiveInOrderTraversal(tree)).to.deep.equal(inOrder);
         });
       });
 
       describe('Iterative Algorithm', () => {
-        test('iterativeInOrderTraversal', () => {
-          expect(iterativeInOrderTraversal(tree)).equal(inOrder);
+        it('iterativeInOrderTraversal', () => {
+          expect(iterativeInOrderTraversal(tree)).to.deep.equal(inOrder);
         });
 
-        test('iterativeInOrderTraversalWithDoubleWhile', () => {
-          expect(iterativeInOrderTraversalWithDoubleWhile(tree)).equal(inOrder);
+        it('iterativeInOrderTraversalWithDoubleWhile', () => {
+          expect(iterativeInOrderTraversalWithDoubleWhile(tree)).to.deep.equal(inOrder);
         });
       });
     });
 
     describe('Post-order Traversal', () => {
       describe('Recursive Algorithm', () => {
-        test('recursivePostOrderTraversal', () => {
-          expect(recursivePostOrderTraversal(tree)).equal(postOrder);
+        it('recursivePostOrderTraversal', () => {
+          expect(recursivePostOrderTraversal(tree)).to.deep.equal(postOrder);
         });
       });
 
       describe('Iterative Algorithm', () => {
-        test('iterativePostOrderTraversal', () => {
-          expect(iterativePostOrderTraversal(tree)).equal(postOrder);
+        it('iterativePostOrderTraversal', () => {
+          expect(iterativePostOrderTraversal(tree)).to.deep.equal(postOrder);
         });
       });
     });
   });
 
   describe('Breadth-first traversal', () => {
-    test('breadthFirstTraversal', () => {
-      expect(breadthFirstTraversal(tree)).equal(bfs);
+    it('breadthFirstTraversal', () => {
+      expect(breadthFirstTraversal(tree)).to.deep.equal(bfs);
     });
   });
 });

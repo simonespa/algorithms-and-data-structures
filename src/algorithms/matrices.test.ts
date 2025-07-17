@@ -9,19 +9,19 @@ describe("Matrix Operations", function () {
     [6, 8, 2, 3],
   ];
 
-  test('sum', () => {
+  it('sum', () => {
     expect(sum(matrix)).equal(73);
   });
 
-  test('sumDiagonal', () => {
+  it('sumDiagonal', () => {
     expect(sumDiagonal(matrix)).equal(21);
   });
 
-  test('sumAntiDiagonal', () => {
+  it('sumAntiDiagonal', () => {
     expect(sumAntiDiagonal(matrix)).equal(19);
   });
 
-  test('sumFrame', () => {
+  it('sumFrame', () => {
     expect(sumFrame(matrix)).equal(49);
   });
 });

@@ -46,8 +46,8 @@ describe('gridTraveller', () => {
   ];
 
   tests.forEach(({ rows, columns, expected }) => {
-    test(`gridTraveller(${rows}, ${columns}) should return ${expected}`, () => {
+    it(`gridTraveller(${rows}, ${columns}) should return ${expected}`, () => {
       expect(gridTraveller(rows, columns)).to.equal(expected);
     });
-  }
+  });
 });
