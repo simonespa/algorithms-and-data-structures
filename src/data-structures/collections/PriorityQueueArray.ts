@@ -11,8 +11,8 @@ export default class PriorityQueueArray extends QueueArray<number> {
     } else {
       let added = false;
       for (let i = 0; i < super.size(); i += 1) {
-        if (item <= super.queue[i]) {
-          super.queue.splice(i, 0, item);
+        if (item <= this.queue[i]) {
+          this.queue.splice(i, 0, item);
           added = true;
           break;
         }

@@ -1,4 +1,3 @@
-// Add any extra import statements you may need here
 const letters = [
   "a",
   "b",
@@ -27,37 +26,37 @@ const letters = [
   "y",
   "z",
 ];
-const index = {
-  a: "0",
-  b: "1",
-  c: "2",
-  d: "3",
-  e: "4",
-  f: "5",
-  g: "6",
-  h: "7",
-  i: "8",
-  j: "9",
-  k: "10",
-  l: "11",
-  m: "12",
-  n: "13",
-  o: "14",
-  p: "15",
-  q: "16",
-  r: "17",
-  s: "18",
-  t: "19",
-  u: "20",
-  v: "21",
-  w: "22",
-  x: "23",
-  y: "24",
-  z: "25",
+const index: { [key: string]: number } = {
+  a: 0,
+  b: 1,
+  c: 2,
+  d: 3,
+  e: 4,
+  f: 5,
+  g: 6,
+  h: 7,
+  i: 8,
+  j: 9,
+  k: 10,
+  l: 11,
+  m: 12,
+  n: 13,
+  o: 14,
+  p: 15,
+  q: 16,
+  r: 17,
+  s: 18,
+  t: 19,
+  u: 20,
+  v: 21,
+  w: 22,
+  x: 23,
+  y: 24,
+  z: 25,
 };
 
 // Add any helper functions you may need here
-function encrypt(char, rotationFactor) {
+function encrypt(char: string, rotationFactor: number): string {
   // to make sure all upper and lower case letters are taken into account
   const lowerCaseChar = char.toLowerCase();
   const entry = index[lowerCaseChar];
@@ -76,7 +75,7 @@ function encrypt(char, rotationFactor) {
   }
 
   // if it is an integer number
-  if (!isNaN(char)) {
+  if (!isNaN(Number(char))) {
     // shift the index module 10 (the size of the numeric list)
     const shiftedIndex = (Number(char) + rotationFactor) % 10;
     return `${shiftedIndex}`;
@@ -86,7 +85,10 @@ function encrypt(char, rotationFactor) {
   return char;
 }
 
-export function rotationalCipher(input, rotationFactor) {
+export function rotationalCipher(
+  input: string,
+  rotationFactor: number,
+): string {
   /**
    * We can resize the "rotationFactor" by using the modular arithmetic
    * The module is the size of the input and rotationFactor % input.length

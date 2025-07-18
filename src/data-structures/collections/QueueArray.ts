@@ -1,4 +1,4 @@
-import Queue from "./Queue";
+import Queue from "./Queue.ts";
 
 export default class QueueArray<T> implements Queue<T> {
   protected queue: Array<T>;
@@ -11,8 +11,8 @@ export default class QueueArray<T> implements Queue<T> {
     this.queue.push(item);
   }
 
-  dequeue(): T {
-    return this.queue.shift();
+  dequeue(): T | undefined {
+    return this.queue.shift() as T;
   }
 
   peek(): T {

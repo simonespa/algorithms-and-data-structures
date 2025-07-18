@@ -1,4 +1,4 @@
-import Stack from "./Stack";
+import Stack from "./Stack.ts";
 
 export default class StackArray<T> implements Stack<T> {
   private stack: Array<T>;
@@ -11,7 +11,7 @@ export default class StackArray<T> implements Stack<T> {
     this.stack.push(item);
   }
 
-  pop(): T {
+  pop(): T | undefined {
     return this.stack.pop();
   }
 

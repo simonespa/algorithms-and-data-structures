@@ -1,4 +1,4 @@
-export function majority(nums: number[]): number {
+export function majority(nums: number[]): number | null {
   const n = nums.length;
   const map = new Map();
 
@@ -15,4 +15,6 @@ export function majority(nums: number[]): number {
 
     map.set(num, counter);
   }
+
+  return null;
 }
