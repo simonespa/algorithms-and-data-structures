@@ -1,6 +1,6 @@
 # Algorithms & Data structures
 
-[![CodeQL Advanced](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/codeql.yml) | [![Dependabot Updates](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main)](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/dependabot/dependabot-updates)
+[![CodeQL Advanced](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/codeql.yml) [![Dependabot Updates](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main)](https://github.com/simonespa/algorithms-and-data-structures/actions/workflows/dependabot/dependabot-updates)
 
 This repo is an open source collection and playground of algorithms, data structures, coding exercises and related documentation to brush up your knowledge of computer science fundamentals.
 
