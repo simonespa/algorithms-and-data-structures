@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      algorithms-and-data-structures:
+        specifier: 'link:'
+        version: 'link:'
     devDependencies:
       '@eslint/js':
         specifier: ^9.31.0
