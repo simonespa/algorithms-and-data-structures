@@ -11,5 +11,7 @@
     "moduleResolution": "nodenext",
     "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [".nyc_output", "coverage", "node_modules"]
 }
