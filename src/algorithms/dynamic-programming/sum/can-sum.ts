@@ -23,7 +23,11 @@
  * @param buffer the object used for memoisation
  * @returns true if the target sun can be constructed
  */
-export default function canSum(targetSum: number, numbers: number[], buffer: object = {}): boolean {
+export default function canSum(
+  targetSum: number,
+  numbers: number[],
+  buffer: object = {},
+): boolean {
   if (targetSum in buffer) return buffer[targetSum];
   if (targetSum === 0) return true;
   if (targetSum < 0) return false;

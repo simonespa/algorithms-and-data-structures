@@ -1,7 +1,7 @@
-import { expect } from 'chai';
-import { getUniformIntegerCountInInterval } from '@src/exercises/uniform-integers/index.ts';
+import { expect } from "chai";
+import { getUniformIntegerCountInInterval } from "@src/exercises/uniform-integers/index.ts";
 
-describe('Uniform Integers Exercise', () => {
+describe("Uniform Integers Exercise", () => {
   const tests = [
     {
       start: 75,
@@ -74,7 +74,7 @@ describe('Uniform Integers Exercise', () => {
     it(`getUniformIntegerCountInInterval(${start}, ${end}) should return ${expected}`, () => {
       if (isException) {
         expect(() => getUniformIntegerCountInInterval(start, end)).to.throw(
-          'The two numbers in input must be integers',
+          "The two numbers in input must be integers",
         );
       } else {
         expect(getUniformIntegerCountInInterval(start, end)).to.equal(expected);

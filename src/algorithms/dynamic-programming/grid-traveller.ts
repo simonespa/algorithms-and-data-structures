@@ -24,7 +24,11 @@
  * @param buffer the object used for memoisation
  * @returns the total number of ways to travel on a N by M grid
  */
-export default function gridTraveller(rows: number, columns: number, buffer: object = {}): number {
+export default function gridTraveller(
+  rows: number,
+  columns: number,
+  buffer: object = {},
+): number {
   const key = getKey(rows, columns);
   if (key in buffer) return buffer[key];
   if (rows <= 0 || columns <= 0) return 0;

@@ -1,30 +1,30 @@
-import { expect } from 'chai';
-import { isPalindrome } from '@src/exercises/palindrome/index.ts';
+import { expect } from "chai";
+import { isPalindrome } from "@src/exercises/palindrome/index.ts";
 
-describe('Palindrome Exercise', () => {
+describe("Palindrome Exercise", () => {
   const tests = [
     {
-      input: '',
+      input: "",
       output: true,
     },
     {
-      input: 'a',
+      input: "a",
       output: true,
     },
     {
-      input: 'aa',
+      input: "aa",
       output: true,
     },
     {
-      input: 'ab',
+      input: "ab",
       output: false,
     },
     {
-      input: 'aba',
+      input: "aba",
       output: true,
     },
     {
-      input: 'abc',
+      input: "abc",
       output: false,
     },
   ];

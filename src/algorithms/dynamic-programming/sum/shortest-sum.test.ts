@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import shortestSum from './shortest-sum.ts';
+import { expect } from "chai";
+import shortestSum from "./shortest-sum.ts";
 
 describe("shortestSum", function () {
   const tests = [

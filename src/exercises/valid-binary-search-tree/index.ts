@@ -1,4 +1,4 @@
-import BinaryTree from '../../data-structures/BinaryTree';
+import BinaryTree from "../../data-structures/BinaryTree";
 
 export function isValidBST(
   node: BinaryTree<number>,
@@ -17,5 +17,8 @@ export function isValidBST(
   if (right !== null && node.value >= right.value) return false;
 
   // check recursively for every node.
-  return isValidBST(node.leftChild, left, node) && isValidBST(node.rightChild, node, right);
+  return (
+    isValidBST(node.leftChild, left, node) &&
+    isValidBST(node.rightChild, node, right)
+  );
 }

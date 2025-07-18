@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import fibonacci from './fibonacci.ts';
+import { expect } from "chai";
+import fibonacci from "./fibonacci.ts";
 
 describe("fibonacci", function () {
   const tests = [

@@ -35,6 +35,9 @@ importers:
       nyc:
         specifier: ^17.1.0
         version: 17.1.0
+      prettier:
+        specifier: 3.6.2
+        version: 3.6.2
       sinon:
         specifier: ^21.0.0
         version: 21.0.0
@@ -1128,6 +1131,11 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   process-on-spawn@1.1.0:
     resolution: {integrity: sha512-JOnOPQ/8TZgjs1JIH/m9ni7FfimjNa/PRx7y/Wb5qdItsnhO0jE4AT7fC0HjC28DUQWDr50dwSYZLdRMlqDq3Q==}
@@ -2503,6 +2511,8 @@ snapshots:
       find-up: 4.1.0
 
   prelude-ls@1.2.1: {}
+
+  prettier@3.6.2: {}
 
   process-on-spawn@1.1.0:
     dependencies:

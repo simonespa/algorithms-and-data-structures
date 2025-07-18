@@ -1,4 +1,4 @@
-import Queue from './Queue';
+import Queue from "./Queue";
 
 export default class QueueArray<T> implements Queue<T> {
   protected queue: Array<T>;

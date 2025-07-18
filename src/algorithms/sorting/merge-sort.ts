@@ -1,4 +1,4 @@
-import SortingOrder from '../../util/SortingOrder';
+import SortingOrder from "../../util/SortingOrder";
 
 interface Split {
   left: Array<number>;
@@ -31,7 +31,11 @@ function whoGoesFirst(x: number, y: number, order: SortingOrder): Operand {
   return Operand.Left;
 }
 
-function merge(left: Array<number>, right: Array<number>, order: SortingOrder): Array<number> {
+function merge(
+  left: Array<number>,
+  right: Array<number>,
+  order: SortingOrder,
+): Array<number> {
   let leftIndex = 0;
   let rightIndex = 0;
 
@@ -40,7 +44,9 @@ function merge(left: Array<number>, right: Array<number>, order: SortingOrder): 
   // while the left index or the right index are not out of bound
   while (leftIndex < left.length || rightIndex < right.length) {
     if (leftIndex < left.length && rightIndex < right.length) {
-      if (whoGoesFirst(left[leftIndex], right[rightIndex], order) === Operand.Left) {
+      if (
+        whoGoesFirst(left[leftIndex], right[rightIndex], order) === Operand.Left
+      ) {
         sortedArray.push(left[leftIndex]);
         leftIndex += 1;
       } else {
@@ -67,7 +73,10 @@ function merge(left: Array<number>, right: Array<number>, order: SortingOrder): 
  * @param input the array of numbers to sort.
  * @param order specify the order of sorting: ascending or descending.
  */
-export default function mergeSort(input: Array<number> | null, order: SortingOrder): Array<number> | null {
+export default function mergeSort(
+  input: Array<number> | null,
+  order: SortingOrder,
+): Array<number> | null {
   if (!Array.isArray(input) || input.length <= 1) return input;
 
   const splitInput: Split = split(input);
