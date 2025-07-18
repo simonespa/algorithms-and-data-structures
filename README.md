@@ -1,10 +1,10 @@
 # Algorithms & Data structures
 
-This repo is an open source collection and playground of algorithms, data structures and related documentation to brush up your knowledge of computer science fundamentals, or learn it from scratch.
+This repo is an open source collection and playground of algorithms, data structures, coding exercises and related documentation to brush up your knowledge of computer science fundamentals.
 
-## How to use it
+## Get started
 
-Install all dependencies
+Initialise the repository
 
 ```
 pnpm install
@@ -33,3 +33,7 @@ or run it in watch mode
 ```
 pnpm test:watch
 ```
+
+## Test coverage
+
+You can find test coverage at https://simonespa.github.io/algorithms-and-data-structures
