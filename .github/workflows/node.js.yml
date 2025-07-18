@@ -6,6 +6,8 @@ name: Node PR checks
 on:
   pull_request:
     branches: ["main"]
+    paths:
+      - src/**/*
 
 jobs:
   build:
