@@ -1,4 +1,4 @@
-import Stack from './Stack';
+import Stack from "./Stack";
 
 export default class StackArray<T> implements Stack<T> {
   private stack: Array<T>;

@@ -1,4 +1,4 @@
-import BinaryTree from '../data-structures/BinaryTree';
+import BinaryTree from "../data-structures/BinaryTree";
 
 /**
  * Depth-First traversal (DFS)
@@ -47,7 +47,9 @@ export function iterativePreOrderTraversal<T>(node: BinaryTree<T>): T[] {
  * Time Complexity: O(N)
  * Auxiliary Space: O(H), where H is the height of the tree.
  */
-export function iterativePreOrderTraversalRightChildOnly<T>(node: BinaryTree<T>): T[] {
+export function iterativePreOrderTraversalRightChildOnly<T>(
+  node: BinaryTree<T>,
+): T[] {
   const result = [];
 
   if (node === null) return result;
@@ -110,7 +112,9 @@ export function iterativeInOrderTraversal<T>(node: BinaryTree<T>): T[] {
   return result;
 }
 
-export function iterativeInOrderTraversalWithDoubleWhile<T>(node: BinaryTree<T>): T[] {
+export function iterativeInOrderTraversalWithDoubleWhile<T>(
+  node: BinaryTree<T>,
+): T[] {
   const result = [];
 
   if (node === null) return result;
@@ -162,7 +166,10 @@ export function iterativePostOrderTraversal<T>(node: BinaryTree<T>): T[] {
   while (current !== null && !visited.has(current)) {
     if (current.leftChild !== null && !visited.has(current.leftChild)) {
       current = current.leftChild;
-    } else if (current.rightChild !== null && !visited.has(current.rightChild)) {
+    } else if (
+      current.rightChild !== null &&
+      !visited.has(current.rightChild)
+    ) {
       current = current.rightChild;
     } else {
       result.push(current.value);

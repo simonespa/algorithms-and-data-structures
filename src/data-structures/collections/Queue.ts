@@ -1,4 +1,4 @@
-import Collection from './Collection';
+import Collection from "./Collection";
 
 /**
  * The {@code Queue} interface represents a first-in-first-out

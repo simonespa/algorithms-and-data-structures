@@ -25,7 +25,7 @@ function initTheCounter(A: number): number {
  * @returns the first uniform number N >= A
  */
 function findTheFirstUniformInteger(A: number) {
-  const tokens = `${A}`.split('');
+  const tokens = `${A}`.split("");
 
   // gets the left-most digit of the number and the number of digits the number is composed of
   let leftMostDigit = Number(tokens[0]);
@@ -60,7 +60,7 @@ export function getUniformIntegerCountInInterval(A: number, B: number) {
    */
 
   if (!Number.isInteger(A) || !Number.isInteger(B))
-    throw new Error('The two numbers in input must be integers');
+    throw new Error("The two numbers in input must be integers");
 
   if (A > B || A <= 0) return 0;
 
@@ -85,7 +85,8 @@ export function getUniformIntegerCountInInterval(A: number, B: number) {
     startInterval = 10;
   }
 
-  let { uniformInteger, leftMostDigit, numberOfDigits } = findTheFirstUniformInteger(startInterval);
+  let { uniformInteger, leftMostDigit, numberOfDigits } =
+    findTheFirstUniformInteger(startInterval);
 
   // while the number is less or equal to B
   while (Number(uniformInteger) <= B) {

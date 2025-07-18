@@ -1,7 +1,7 @@
-import { expect } from 'chai';
-import gridTraveller from './grid-traveller.ts';
+import { expect } from "chai";
+import gridTraveller from "./grid-traveller.ts";
 
-describe('gridTraveller', () => {
+describe("gridTraveller", () => {
   const tests = [
     { rows: 0, columns: 0, expected: 0 },
     { rows: 0, columns: 1, expected: 0 },

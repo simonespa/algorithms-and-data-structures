@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { sum, sumDiagonal, sumAntiDiagonal, sumFrame } from './matrices.js';
+import { expect } from "chai";
+import { sum, sumDiagonal, sumAntiDiagonal, sumFrame } from "./matrices.js";
 
 describe("Matrix Operations", function () {
   const matrix = [
@@ -9,19 +9,19 @@ describe("Matrix Operations", function () {
     [6, 8, 2, 3],
   ];
 
-  it('sum', () => {
+  it("sum", () => {
     expect(sum(matrix)).equal(73);
   });
 
-  it('sumDiagonal', () => {
+  it("sumDiagonal", () => {
     expect(sumDiagonal(matrix)).equal(21);
   });
 
-  it('sumAntiDiagonal', () => {
+  it("sumAntiDiagonal", () => {
     expect(sumAntiDiagonal(matrix)).equal(19);
   });
 
-  it('sumFrame', () => {
+  it("sumFrame", () => {
     expect(sumFrame(matrix)).equal(49);
   });
 });

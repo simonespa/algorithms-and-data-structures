@@ -1,6 +1,6 @@
-import { expect } from 'chai';
-import mergeSort from '@src/algorithms/sorting/merge-sort.ts';
-import SortingOrder from '@src/util/SortingOrder.ts';
+import { expect } from "chai";
+import mergeSort from "@src/algorithms/sorting/merge-sort.ts";
+import SortingOrder from "@src/util/SortingOrder.ts";
 
 describe("mergeSort", function () {
   const tests = [

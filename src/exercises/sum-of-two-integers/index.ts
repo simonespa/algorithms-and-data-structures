@@ -14,12 +14,12 @@ export function getSum(a: number, b: number): number {
   const xSign = getSign(x);
   const ySign = getSign(y);
 
-  if (xSign === '-') {
-    x = x.split('').slice(1).join('');
+  if (xSign === "-") {
+    x = x.split("").slice(1).join("");
   }
 
-  if (ySign === '-') {
-    y = y.split('').slice(1).join('');
+  if (ySign === "-") {
+    y = y.split("").slice(1).join("");
   }
 
   if (xSign === ySign) {
@@ -29,7 +29,7 @@ export function getSum(a: number, b: number): number {
       counter++;
     }
 
-    if (xSign === '+') {
+    if (xSign === "+") {
       return counter;
     }
 
@@ -38,7 +38,7 @@ export function getSum(a: number, b: number): number {
   if (x === y) {
     return 0;
   }
-  let sign = '';
+  let sign = "";
 
   if (Number(x) > Number(y)) {
     let counter = Number(x);
@@ -47,8 +47,8 @@ export function getSum(a: number, b: number): number {
       counter--;
     }
 
-    if (xSign === '-') {
-      sign = '-';
+    if (xSign === "-") {
+      sign = "-";
     }
 
     return Number(`${sign}${counter}`);
@@ -60,8 +60,8 @@ export function getSum(a: number, b: number): number {
     counter--;
   }
 
-  if (ySign === '-') {
-    sign = '-';
+  if (ySign === "-") {
+    sign = "-";
   }
 
   return Number(`${sign}${counter}`);
@@ -70,7 +70,7 @@ export function getSum(a: number, b: number): number {
 function getSign(n: string): string {
   const sign = n.charAt(0);
 
-  if (sign === '-') return '-';
+  if (sign === "-") return "-";
 
-  return '+';
+  return "+";
 }

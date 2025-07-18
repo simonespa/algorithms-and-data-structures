@@ -21,7 +21,10 @@ export default class NumericMaxHeap {
     // If the current node is a leaf, exit
     if (this.isLeaf(current)) return;
     // Get the max child
-    const maxChild = this.getMax(this.getLeftChild(current), this.getRightChild(current));
+    const maxChild = this.getMax(
+      this.getLeftChild(current),
+      this.getRightChild(current),
+    );
     // If the current node is smaller than the max child
     if (this.heap[current] < this.heap[maxChild]) {
       // swap positio between the current node and its child

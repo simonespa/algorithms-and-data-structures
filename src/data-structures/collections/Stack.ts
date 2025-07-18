@@ -1,4 +1,4 @@
-import Collection from './Collection';
+import Collection from "./Collection";
 
 /**
  * The {@code Stack} interface represents a last-in-first-out

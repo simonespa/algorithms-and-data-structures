@@ -21,7 +21,10 @@ export default class NumericMinHeap {
     // If the current node is a leaf, exit
     if (this.isLeaf(current)) return;
     // Get the min child
-    const minChild = this.getMin(this.getLeftChild(current), this.getRightChild(current));
+    const minChild = this.getMin(
+      this.getLeftChild(current),
+      this.getRightChild(current),
+    );
     // If the current node is smaller than the max child
     if (this.heap[current] > this.heap[minChild]) {
       // swap positio between the current node and its child

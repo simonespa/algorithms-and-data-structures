@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import howSum from './how-sum.ts';
+import { expect } from "chai";
+import howSum from "./how-sum.ts";
 
 describe("howSum", function () {
   const tests = [
