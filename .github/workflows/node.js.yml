@@ -31,5 +31,5 @@ jobs:
       - run: pnpm install
       - run: pnpm ci:lint
       - run: pnpm ci:format
-      - run: pnpm ci:coverage
       - run: pnpm test
+      - run: pnpm ci:coverage
