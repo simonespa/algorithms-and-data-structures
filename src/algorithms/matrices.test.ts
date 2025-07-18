@@ -9,6 +9,11 @@ describe("Matrix Operations", function () {
     [6, 8, 2, 3],
   ];
 
+  // this test is for testing purposes of the coverage workflow
+  it("should have the same number of rows and columns", () => {
+    expect(matrix.length).to.equal(matrix[0].length);
+  });
+
   it("sum", () => {
     expect(sum(matrix)).equal(73);
   });
