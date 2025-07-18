@@ -1,4 +1,4 @@
-import BinaryTree from "../data-structures/BinaryTree";
+import BinaryTree from "@src/data-structures/BinaryTree.ts";
 
 /**
  * Depth-First traversal (DFS)

@@ -16,12 +16,15 @@
  * - 2 is the number of time the function is recursively called each time (branching factor)
  * - "n" is the index of the nth element (height of the tree)
  *
- * @param n the index of the nth element in the Fibonacci sequence.
- * @param buffer the object used for memoisation
- * @returns the nth element in the Fibonacci sequence.
+ * @param n the index of the Fibonacci sequence to return
+ * @param buffer the object used for memoisation (see https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)
+ * @returns the nth element of the Fibonacci sequence
  */
-export default function fibonacci(n: number, buffer: object = {}): number {
-  if (n in buffer) return buffer[n];
+export default function fibonacci(
+  n: number,
+  buffer: Record<number, number> = {},
+): number {
+  if (buffer[n] !== undefined) return buffer[n];
   if (n <= 0) return 0;
   if (n <= 2) return 1;
 

@@ -27,7 +27,7 @@
 export default function gridTraveller(
   rows: number,
   columns: number,
-  buffer: object = {},
+  buffer: Record<string, number> = {},
 ): number {
   const key = getKey(rows, columns);
   if (key in buffer) return buffer[key];
