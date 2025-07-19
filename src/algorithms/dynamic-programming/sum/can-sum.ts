@@ -26,7 +26,7 @@
 export default function canSum(
   targetSum: number,
   numbers: number[],
-  buffer: object = {},
+  buffer: Record<number, boolean> = {},
 ): boolean {
   if (targetSum in buffer) return buffer[targetSum];
   if (targetSum === 0) return true;

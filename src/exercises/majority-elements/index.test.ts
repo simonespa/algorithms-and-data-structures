@@ -8,12 +8,12 @@ describe("Majority Elements Exercise", () => {
 
   it("majority() with empty array", () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    expect(majority([])).to.be.undefined;
+    expect(majority([])).to.be.null;
   });
 
   it("majority() with no majority element", () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    expect(majority([1, 2, 3, 4])).to.be.undefined;
+    expect(majority([1, 2, 3, 4])).to.be.null;
   });
 
   it("majority() with single element", () => {

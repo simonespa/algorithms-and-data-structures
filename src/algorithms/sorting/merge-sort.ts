@@ -1,4 +1,4 @@
-import SortingOrder from "../../util/SortingOrder";
+import SortingOrder from "@src/util/SortingOrder.ts";
 
 interface Split {
   left: Array<number>;
@@ -81,8 +81,9 @@ export default function mergeSort(
 
   const splitInput: Split = split(input);
 
-  const sortedLeft = mergeSort(splitInput.left, order);
-  const sortedRight = mergeSort(splitInput.right, order);
+  // make sure to handle the case where the split returns null
+  const sortedLeft = mergeSort(splitInput.left, order) ?? [];
+  const sortedRight = mergeSort(splitInput.right, order) ?? [];
 
   return merge(sortedLeft, sortedRight, order);
 }

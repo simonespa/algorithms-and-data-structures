@@ -12,7 +12,8 @@
     "prepare": "husky",
     "ci:lint": "eslint 'src/**/*.ts'",
     "ci:format": "prettier --check --ignore-unknown .",
-    "ci:coverage": "nyc check-coverage --lines 90 --branches 80 --statements 90"
+    "ci:coverage": "nyc check-coverage --lines 90 --branches 80 --statements 90",
+    "dev": "tsc --watch"
   },
   "engines": {
     "node": ">=22"
@@ -68,8 +69,5 @@
   "bugs": {
     "url": "https://github.com/simonespa/algorithms-and-data-structures/issues"
   },
-  "homepage": "https://github.com/simonespa/algorithms-and-data-structures#readme",
-  "dependencies": {
-    "algorithms-and-data-structures": "link:"
-  }
+  "homepage": "https://github.com/simonespa/algorithms-and-data-structures#readme"
 }

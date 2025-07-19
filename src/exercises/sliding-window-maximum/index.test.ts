@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { maxSlidingWindow } from ".";
+import { maxSlidingWindow } from "./index.ts";
 
 describe("Sliding Window Maximum Exercise", () => {
   const tests = [
