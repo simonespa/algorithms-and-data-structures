@@ -33,6 +33,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
       - run: pnpm install
+      - run: pnpm ci:typecheck
       - run: pnpm ci:lint
       - run: pnpm ci:format
       - run: pnpm test
