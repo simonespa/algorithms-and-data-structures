@@ -69,8 +69,5 @@
   "bugs": {
     "url": "https://github.com/simonespa/algorithms-and-data-structures/issues"
   },
-  "homepage": "https://github.com/simonespa/algorithms-and-data-structures#readme",
-  "dependencies": {
-    "algorithms-and-data-structures": "link:"
-  }
+  "homepage": "https://github.com/simonespa/algorithms-and-data-structures#readme"
 }

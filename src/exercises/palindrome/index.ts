@@ -13,3 +13,5 @@ export function isPalindrome(input: string): boolean {
 
   return true;
 }
+
+console.log(isPalindrome("racecar"));

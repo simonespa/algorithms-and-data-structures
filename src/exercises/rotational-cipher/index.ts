@@ -62,7 +62,7 @@ function encrypt(char: string, rotationFactor: number): string {
   const entry = index[lowerCaseChar];
 
   // it is a letter because an entry has been found in the index
-  if (typeof entry === "string") {
+  if (entry !== undefined) {
     // shift the index module 26 (the size of the alphabet)
     const shiftedIndex = (Number(entry) + rotationFactor) % 26;
     const encryptedLetter = letters[shiftedIndex];
